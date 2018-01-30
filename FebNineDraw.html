@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+    <title>旺运乐抽</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font: 12px/1.5 "Microsoft Yahei", arial, tahoma, "Hiragino Sans GB";
+            color: #323232;
+            background: rgb(248,248,248);
+        }
+        body {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 1rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        input {
+            outline: none;
+            border: none;
+        }
+
+        [v-cloak] {
+            display:none;
+        }
+
+        @media only screen and (max-width: 359px) {
+            html {
+                font-size: 12px;
+            }
+        }
+        @media only screen and (min-width: 360px) and (max-width: 374px) {
+            html {
+                font-size: 13.5px;
+            }
+        }
+        @media only screen and (min-width: 375px) and (max-width: 399px) {
+            html {
+                font-size: 14.0625px;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 479px) {
+            html {
+                font-size: 15px;
+            }
+        }
+        @media only screen and (min-width: 480px) and (max-width: 539px) {
+            html {
+                font-size: 18px;
+            }
+        }
+        @media only screen and (min-width: 540px) and (max-width: 639px) {
+            html {
+                font-size: 20.25px;
+            }
+        }
+        @media only screen and (min-width: 640px) and (max-width: 719px) {
+            html {
+                font-size: 24px;
+            }
+        }
+        @media only screen and (min-width: 720px) {
+            html {
+                font-size: 27px;
+            }
+        }
+        .body-hidden{
+            overflow: hidden;
+        }
+        .common-head {
+            height: 3.40741rem;
+            background: #FFFFFF;
+            color: #333333;
+            width: 100%;
+            max-width: 750px;
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .common-head i{
+            z-index: 5;
+            width: 0.7rem;
+            height: 1.17rem;
+            display: block;
+            position: absolute;
+            background-image: url(../../../register/images/icon_left.png);
+            background-size: cover;
+            top: 50%;
+            left: 2rem;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+        }
+        .common-head span{
+            text-align: center;
+            font-size: 1.28rem;
+            line-height: 3.40741rem;
+            position: absolute;
+            width: 100%;
+        }
+        .tips-wapper{
+            position: fixed;
+            overflow: auto;
+            z-index: 4;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .act{
+            color: #fff;
+            font-size: 1rem;
+            text-align: right;
+            position: fixed;
+            width: 2.5rem;
+            height: 6rem;
+            top: 17%;
+            right: 0;
+            z-index: 5;
+            /* padding: 0.5rem; */
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+        .act img{
+            width: 100%;
+            display: block;
+        }
+        .explan{
+            position: fixed;
+            top: 1.5rem;
+            left: 14%;
+            width: 76%;
+            background: #fff;
+            color: #666;
+            text-align: left;
+            font-size: 0.8rem;
+            z-index: 10000;
+            padding: 1rem;
+            box-sizing: border-box;
+            border-radius: 0.2rem;
+            top: 20%;
+            height: 24rem;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .explan img{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .explan::-webkit-scrollbar {
+            width: 0px;
+            background-color: #eee;
+        }
+        .explan p{
+            font-size: 0.8rem;
+            line-height: 1.3rem;
+        }
+        .explan:after{
+
+        }
+        .del{
+            background: url(../../../images/activity/december/del.png) center bottom no-repeat;
+            background-size: 0.6rem;
+            width: 0.6rem;
+            height: 1rem;
+            position: fixed;
+            right: -0.6rem;
+            bottom: -2.5rem;
+            top: 4rem;
+            top: 21%;
+            right: 7.9%;
+            z-index: 10000;
+        }
+        .maskErrorDl {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            width: 100%;
+            height: 100%;
+        }
+        .maskErrorDl .maskErrorDl-box {
+            width: 14.81481rem;
+            /* height: 0.5rem; */
+            background: #f2f2f2;
+            color: #090909;
+            overflow: hidden;
+            margin: 27%;
+            font-size: 1.18519rem;
+            text-align: center;
+            /* padding: 0.24691rem 0 1.48148rem; */
+            border-radius: 0.24691rem;
+            height: 2rem;
+        }
+        .maskErrorDl .maskErrorDl-box p {
+            margin: 0rem auto;
+            line-height: 2rem;
+        }
+        .maskErrorDl .maskErrorDl-box a {
+            width: 14.81481rem;
+            height: 2.22222rem;
+            text-align: center;
+            line-height: 2.22222rem;
+            background: #ffa200;
+            font-size: 1.23457rem;
+            color: #fff5dc;
+            display: block;
+            margin: 2.9rem auto;
+            border-radius: 0.24691rem;
+        }
+        .maskErrorD2 {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+        }
+        .maskErrorD2 .re-login {
+            position: absolute;
+            top: 37%;
+            background-color: white;
+            width: 12rem;
+            left: 50%;
+            transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            /* IE 9 */
+            -moz-transform: rotate(7deg) translateX(-50%);
+            /* Firefox */
+            -webkit-transform: translateX(-50%);
+            /* Safari 和 Chrome */
+            -o-transform: translateX(-50%);
+            padding: 1rem 1.5rem 1rem;
+        }
+        .maskErrorD2 .re-login .tip {
+            font-size: 1.2rem;
+            color: #fb6734;
+        }
+        .maskErrorD2 .re-login .login-button {
+            text-align: center;
+        }
+        .maskErrorD2 .re-login .login-button .button {
+            display: inline-block;
+            text-align: center;
+            width: 11rem;
+            margin-top: 0.5rem;
+            height: 2.3rem;
+            background-color: #fb6734;
+            color: white;
+            line-height: 2.3rem;
+            font-size: 1rem;
+        }
+        .pay-scoll{
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+            max-width: 750px;
+            position: absolute;
+            width: 80%;
+            top: 7.6%;
+            left: 4rem;
+        }
+        .pay-scoll .info{
+            height: 1.5rem;
+            margin: 0 auto;
+            width: 83%;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        .pay-scoll .info.optou{
+            opacity: 0;
+        }
+        .pay-scoll .info .infoScoll{
+            position: absolute;
+            overflow: hidden;
+        }
+        .draw img{
+            display: block;
+            width: 100%;
+        }
+        .draw .prize{
+            position: relative;
+        }
+        .draw  .prize .prize-border{
+            list-style: none;
+            /* height: 20rem; */
+            width: 87%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            top: 21.2%;
+            /* background-color: #CCC; */
+            /* display: flex; */
+        }
+        .draw .prize .prize-border li{
+            width: 25%;
+            height: 5.8rem;
+            float: left;
+            text-align: center;
+            /* line-height: 2rem; */
+            /* width: 25%; */
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+        }
+        .draw .prize .prize-border li .content{
+            width: 93%;
+            height: 93%;
+            display: inline-block;
+            background-image: url("../../../images/activity/2018Activity/Feb/nineDraw/un-check.png");
+            background-size: cover;
+            /* vertical-align: middle; */
+            /* margin: auto; */
+            /* justify-content: center; */
+            /* align-items: Center; */
+        }
+        .draw .prize .prize-border li .content.active{
+            background-image: url("../../../images/activity/2018Activity/Feb/nineDraw/check.png");
+            background-size: cover;
+            /* vertical-align: middle; */
+            /* margin: auto; */
+            /* justify-content: center; */
+            /* align-items: Center; */
+        }
+        .draw .prize .prize-border li .content.select{
+            background-image: url("../../../images/activity/2018Activity/Feb/nineDraw/select.png");
+            background-size: cover;
+            /* vertical-align: middle; */
+            /* margin: auto; */
+            /* justify-content: center; */
+            /* align-items: Center; */
+        }
+        .draw .prize .progress{
+            position: absolute;
+            color: #fefefe;
+            left: 14%;
+            bottom: 7.5%;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        .draw .prize .progress-div{
+            position: absolute;
+            left: 9%;
+            bottom: 10.8%;
+            color: white;
+            width: 83%;
+            font-size: 0.8rem;
+        }
+
+        .draw .prize .progress-div .line-span{
+            width: 39.5%;
+            height: 0.6rem;
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        .draw .prize .progress-div .line-span .line-img{
+            width: 0%;
+            height: 0.6rem;
+            display: inline-block;
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/progress.png);
+            background-size: cover;
+        }
+        .draw .prize .draw-click{
+            position: absolute;
+            width: 8rem;
+            height: 3rem;
+            bottom: 7%;
+            right: 10%;
+        }
+        .draw .chest-box{
+            position: relative;
+        }
+        .draw .chest-box .box-info{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            z-index: 100;
+            text-align: center;
+            width: 100%;
+            top: 16%;
+            color: #fee63b;
+            font-size: 0.8rem;
+        }
+        .draw .chest-box .box-info span{
+            -webkit-transform: scale(0.9);
+            display: inline-block;
+        }
+        .draw .chest-box .first-box{
+            position: absolute;
+            height: 2.8rem;
+            width: 4rem;
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/gray.png);
+            background-size: cover;
+            top: 39%;
+            left: 27%;
+        }
+        .draw .chest-box .first-box.active{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/first.png);
+            background-size: cover;
+        }
+        .draw .chest-box .first-box.hsOpen{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/first_open.png);
+            background-size: cover;
+        }
+        .draw .chest-box .second-box{
+            position: absolute;
+            height: 2.8rem;
+            width: 4rem;
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/gray.png);
+            background-size: cover;
+            top: 39%;
+            left: 57.5%;
+        }
+        .draw .chest-box .second-box.active{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/second.png);
+            background-size: cover;
+        }
+        .draw .chest-box .second-box.hsOpen{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/second_open.png);
+            background-size: cover;
+        }
+        .draw .chest-box .third-box{
+            position: absolute;
+            height: 2.8rem;
+            width: 4rem;
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/gray.png);
+            background-size: cover;
+            bottom: 3.1rem;
+            left: 27%;
+        }
+        .draw .chest-box .third-box.active{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/third.png);
+            background-size: cover;
+        }
+        .draw .chest-box .third-box.hsOpen{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/third_open.png);
+            background-size: cover;
+        }
+        .draw .chest-box .four-box{
+            position: absolute;
+            height: 2.8rem;
+            width: 4rem;
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/gray.png);
+            background-size: cover;
+            bottom: 3.1rem;
+            left: 57.5%;
+        }
+        .draw .chest-box .four-box.active{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/four.png);
+            background-size: cover;
+        }
+        .draw .chest-box .four-box.hsOpen{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/four_open.png);
+            background-size: cover;
+        }
+        .draw .record{
+           position: relative;
+        }
+        .draw .record .record-list{
+            position: absolute;
+            top: 4rem;
+            color: white;
+            left: 53%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            width: 73%;
+            text-align: left;
+            font-size: 0.9rem;
+            height: 8.6rem;
+            overflow: scroll;
+        }
+        .draw .record .record-list div{
+            line-height: 1.5rem;
+        }
+        .reward-dialog{
+            position: fixed;
+            width: 68%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            z-index: 100;
+            top: 24%;
+            max-width: 500px;
+        }
+        .reward-dialog img{
+            display: block;
+            width: 100%;
+        }
+        .reward-dialog .reward-img{
+            position: absolute;
+            height: 6rem;
+            width: 9rem;
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/iphone.png);
+            background-size: cover;
+            top: 29%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+        }
+        .reward-dialog .reward-img.iphoneX{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/iphone.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.yuan2018{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/2018.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.kindle{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/kindle.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.jd500{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/jd500.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.jd100{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/jd100.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.red88{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/red88.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.jd50{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/jd50.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.red28{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/red28.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.red10{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/red10.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.xj10{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/xj10.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.rate{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/rate.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.open-hf10{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/hf10.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.open-jd50{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/jd50.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.open-jd500{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/jd500.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.open-drink{
+            background-image: url(../../../images/activity/2018Activity/Feb/nineDraw/prizes/drink.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-content{
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .reward-dialog .reward-content p{
+            font-size: 0.9rem;
+        }
+        .reward-dialog .reward-button{
+            position: absolute;
+            width: 12rem;
+            height: 3rem;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+        }
+
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div class="common-head" v-show="isWap" >
+        <i @click="back()"></i>
+        <span>{{title}}</span>
+    </div>
+    <div class="draw">
+        <img src="../../../images/activity/2018Activity/Feb/nineDraw/bg_1.png" />
+        <div class="prize">
+          <img src="../../../images/activity/2018Activity/Feb/nineDraw/bg_2.png" />
+          <!--滚动条-->
+          <div class="pay-scoll notice-box">
+            <div class="info">
+                <div class="infoScoll" v-for="item in infoList">
+                    <span style="font-size: 1rem">恭喜 {{item.phone}} 获得{{item.awardName}}</span>
+                </div>
+            </div>
+          </div>
+
+           <!--背景框-->
+           <ul class="prize-border">
+                <li><div id="1" class="content" :class="time ==1 ? 'active' : ''"></div></li>
+                <li><div id="2" class="content" :class="time ==2 ? 'active' : ''"></div></li>
+                <li><div id="3" class="content" :class="time ==3 ? 'active' : ''"></div></li>
+                <li><div id="4" class="content" :class="time ==4 ? 'active' : ''"></div></li>
+                <li><div id="8" class="content" :class="time ==8 ? 'active' : ''"></div></li>
+                <li><div id="7" class="content" :class="time ==7 ? 'active' : ''"></div></li>
+                <li><div id="6" class="content" :class="time ==6 ? 'active' : ''"></div></li>
+                <li><div id="5" class="content" :class="time ==5 ? 'active' : ''"></div></li>
+                <li><div id="9" class="content" :class="time ==9 ? 'active' : ''"></div></li>
+                <li><div id="10" class="content" :class="time ==10 ? 'active' : ''"></div></li>
+                <li><div id="11" class="content" :class="time ==11 ? 'active' : ''"></div></li>
+                <li><div id="12" class="content" :class="time ==12 ? 'active' : ''"></div></li>
+           </ul>
+
+           <!--当前进度-->
+           <div class="progress">
+               剩余抽奖次数：{{lastLotteryTimes}}
+           </div>
+
+           <div class="progress-div">
+               <span>0</span>
+               <span  class="line-span">
+                 <span class="line-img" id="line-img"></span>
+               </span>
+               <span>{{lastLotteryTimes + hasLotteryTimes}}</span>
+           </div>
+
+            <!--点击抽奖-->
+           <div class="draw-click" @click="drawClick()"></div>
+
+        </div>
+
+        <!--开启宝箱-->
+        <div class="chest-box">
+           <img src="../../../images/activity/2018Activity/Feb/nineDraw/bg_3.png" />
+
+            <div class="first-box" v-show="hasLotteryTimes<5"></div>
+            <div class="first-box" v-show="hasLotteryTimes>=5" :class="chest_1?'hsOpen': 'active'" @click="openBox(12)"></div>
+
+            <div class="second-box" v-show="hasLotteryTimes<25"></div>
+            <div class="second-box" v-show="hasLotteryTimes>=25" :class="chest_2?'hsOpen': 'active'" @click="openBox(13)"></div>
+
+            <div class="third-box" v-show="hasLotteryTimes<50"></div>
+            <div class="third-box" v-show="hasLotteryTimes>=50" :class="chest_3?'hsOpen': 'active'" @click="openBox(14)"></div>
+
+            <div class="four-box" v-show="hasLotteryTimes<100"></div>
+            <div class="four-box" v-show="hasLotteryTimes>=100" :class="chest_4?'hsOpen': 'active'" @click="openBox(15)"></div>
+
+            <div class="box-info">
+                <span>当前累计抽奖：{{hasLotteryTimes}}次</span>
+            </div>
+        </div>
+
+        <!--活动记录-->
+        <div class="record">
+          <img src="../../../images/activity/2018Activity/Feb/nineDraw/bg_4.png" />
+          <div class="record-list">
+              <div v-for="item in myLotteryLogList">
+                  <span>{{item.addTime | timeTrans}}</span>
+                  <span style="margin-left: 1.2rem;">获得</span>
+                  <span>{{item.awardName}}</span>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="act" @click="showTip = !showTip " >
+        <img src="../../../images/activity/2018Activity/Feb/nineDraw/rule.png" />
+    </div>
+    <div class="explan"  v-show="!showTip">
+        <p>1、活动时间：2月12日--2月21日；</p>
+        <p>2、活动对象：平台所有用户；</p>
+        <p>3、活动期间，用户投资聪明钱理财产品，完成累计投资额2000元，即可获得一次取赢iPhone X和2018现金的抽奖机会；</p>
+        <p>4、活动期间，每抽5次、25次、50次和100次时，获得相应开启宝箱机会并可100%中奖，分别获得话费、京东卡、电水壶、现金等奖品；</p>
+        <p>5、该活动仅限投资期限≥35天的项目，新手标、小元宝（活期）、聪明惠车及假日宝产品不参与活动；</p>
+        <p>6、关于奖品的发放：现金奖励、话费与其他实物奖励将在活动结束后的7个工作日内发放，红包与加息券奖励实时发放至您的账户内；</p>
+        <p>7、本活动最终解释权在法律允许范围内归聪明钱所有，如有疑问请联系客户服务热线400-1818-880，我们将竭诚为您服务。</p>
+    </div>
+    <span class="del" v-show="!showTip"  @click="showTip = !showTip"></span>
+    <div class="tips-wapper" v-show="!showTip" @click="showTip = !showTip "></div>
+
+    <!--中奖弹窗-->
+    <div v-show="awardOpen">
+      <div class="tips-wapper" style="z-index: 6;"></div>
+      <div class="reward-dialog">
+          <div style="position: relative">
+              <img src="../../../images/activity/2018Activity/Feb/nineDraw/reward-dialog.png"/>
+              <div class="reward-img" :class="{1:'iphoneX',2:'yuan2018',3:'kindle',4:'jd500',5:'jd100',6:'red88',7:'jd50',
+             8:'red28',9:'red10',10:'xj10',11:'rate',12:'open-hf10',13:'open-jd50',14:'open-drink',15:'open-jd500'}[awardId]"></div>
+              <div class="reward-content">
+                  <p>恭喜您！获得奖品<span v-text="{1:'iPhone X',2:'2018现金',3:'Kindle',4:'500元京东卡',5:'100元京东卡',6:'88元红包',7:'50元京东卡',
+             8:'28元红包',9:'10元红包',10:'10元现金',11:'1.2%加息券',12:'10元话费',13:'50元京东卡',14:'小米电水壶',15:'500元京东卡'}[awardId]"></span></p>
+                  <p>新年大吉大利</p>
+              </div>
+              <div class="reward-button" @click="awardOpen=false"></div>
+          </div>
+      </div>
+    </div>
+
+    <div v-show="validError" class="maskErrorDl v-cloak" @click="validError=false">
+        <div class="maskErrorDl-box">
+            <p>{{validErrorInfo}}</p>
+        </div>
+    </div>
+
+
+    <div class="maskErrorD2" v-show="loginDialog">
+        <div class="re-login">
+            <p class="tip">提示：</p>
+            <p>　　您的登录已过期或已在其他设备登录，请重新登录</p>
+            <div class="login-button">
+                <span class="button" @click="goLogin()">确定</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../../../register/js/vue.min.js" ></script>
+<script type="text/javascript" src="../../../register/js/jweixin-1.0.0.js" ></script>
+<script type="text/javascript" src="../../../register/js/jquery-1.9.1.js" ></script>
+<script type="text/javascript" src="../../../js/config.js" ></script>
+
+<script>
+
+    Vue.filter('timeTrans', function (value) {
+        var date = new Date(value);
+        var m = date.getMonth() + 1 + '';
+        var d = date.getDate() + '';
+        var h = date.getHours() +'';
+        var Min = date.getMinutes()+ '';
+        var n = date.getSeconds() +'';
+        if(m.length == 1 ){
+            m = 0 + m
+        }
+        if(d.length == 1 ){
+            d = 0 + d
+        }
+        if(h.length == 1 ){
+            h = 0 + h
+        }
+        if(Min.length == 1 ){
+            Min = 0 + Min
+        }
+        if(n.length == 1){
+            n = 0 + n
+        }
+        return date.getFullYear()+"."+ m +"."+ d + "  " + h+':'+Min + ':' + n;
+    })
+
+    var example2 = new Vue({
+        el: '#app',
+        data: {
+            hsLogin: false,
+            title: '新年乐抽 iPhoneX',
+            isWap : false,
+            uid: '', //用户uid
+            token:'', //用户token
+            validError: false,
+            validErrorInfo:'',
+            loginDialog:false,//登陆过期
+            showTip: true,
+            infoList:[], //轮播信息展示列表
+            count: 0,   //旋转几圈
+            time : 0,   //抽奖框位置
+            listCount :0, //中奖数字所在位置
+            timeVal:100,  //旋转时间间隔
+            isClick: false, //判断抽奖是否点击开始
+            lastLotteryTimes: 0, //剩余抽奖次数
+            hasLotteryTimes:0,  //已抽奖次数
+            openChestTimes: 0,  //已开宝箱次数
+            myLotteryLogList:[] ,//我自己的中奖信息
+            awardId: 15,  //中奖ID号
+            awardOpen:false, //中奖弹框开启
+            chest_1:false,  //青铜宝箱是否开启
+            chest_2:false,  //白银宝箱是否开启
+            chest_3:false,  //黄金宝箱是否开启
+            chest_4:false,  //铂金宝箱是否开启
+        },
+        mounted:function(){
+            document.title = '新年投资赢大奖、旺运乐抽iPhoneX、抽大奖、开宝箱、2018现金奖品助你狗年行大运、金狗旺新年！';
+            var currUrl = window.location.href;
+            var user = localStorage.getItem("ngStorage-user");
+            if(this.getQueryString('wap') != null && this.getQueryString('wap')!=''){ //h5有wap字段
+                this.isWap = true;
+                if(user == '{}' || JSON.parse(user) == null){
+                    this.hsLogin = false;
+                }else {
+                    user = JSON.parse(user); //转为json串
+                    this.uid = user.member.uid;
+                    this.token = user.token;
+                    this.hsLogin = true;
+                    this.getDrawTime(); //获取中奖次数
+                    this.getAwardInfo(); //获取自身中奖信息
+                }
+            }else { //app没有wap,直接传uid过来
+                var uid = this.getQueryString('uid');
+                if(uid == null || uid ==""){
+                    this.hsLogin = false;
+                    //alert( this.uid+ "****"+this.token)
+                }else{
+                    this.uid = uid;
+                    this.token = this.getQueryString('token');
+                    //alert( this.uid+ "****"+this.token)
+                    this.hsLogin = true;
+                    this.getDrawTime(); //获取中奖次数
+                    this.getAwardInfo(); //获取自身中奖信息
+                }
+            }
+            this.getAwardPeople();
+
+            //页面配置
+            $.ajax({
+                url: '/product/signWeChat.dos',
+                type: 'post',
+                data: { url: currUrl, version: '2.0.0', channel: '3' },
+                success: function (data) {
+                    if (data.success) {
+                        wx.config({
+                            debug: false,
+                            appId: data.map.appid,
+                            timestamp: data.map.timestamp,
+                            nonceStr: data.map.noncestr,
+                            signature: data.map.sign,
+                            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                        });
+                        wx.ready(function () {
+                            wx.onMenuShareTimeline({
+                                desc:  '新年乐抽 iPhoneX',
+                                title:  '新年投资赢大奖、旺运乐抽iPhoneX、抽大奖、开宝箱、2018现金奖品助你狗年行大运、金狗旺新年！',
+                                link: 'https://m.congmingmoney.com/gwt/app/template/activity/2018Activity/FebNineDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/gwt/app/images/activity/2018Activity/Feb/nineDraw/bg_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareAppMessage({
+                                title:  '新年乐抽 iPhoneX',
+                                desc:  '新年投资赢大奖、旺运乐抽iPhoneX、抽大奖、开宝箱、2018现金奖品助你狗年行大运、金狗旺新年！',
+                                link: 'https://m.congmingmoney.com/gwt/app/template/activity/2018Activity/FebNineDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/gwt/app/images/activity/2018Activity/Feb/nineDraw/bg_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareQQ({
+                                title:  '新年乐抽 iPhoneX',
+                                desc:  '新年投资赢大奖、旺运乐抽iPhoneX、抽大奖、开宝箱、2018现金奖品助你狗年行大运、金狗旺新年！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/FebNineDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Feb/nineDraw/bg_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareWeibo({
+                                title:  '新年乐抽 iPhoneX',
+                                desc:  '新年投资赢大奖、旺运乐抽iPhoneX、抽大奖、开宝箱、2018现金奖品助你狗年行大运、金狗旺新年！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/FebNineDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Feb/nineDraw/bg_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareQZone({
+                                title:  '新年乐抽 iPhoneX',
+                                desc:  '新年投资赢大奖、旺运乐抽iPhoneX、抽大奖、开宝箱、2018现金奖品助你狗年行大运、金狗旺新年！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/FebNineDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Feb/nineDraw/bg_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                        })
+
+                    };
+                }
+            });
+        },
+        methods: {
+            //立即返回
+            back:function () {
+                window.location.href = "/main/home";
+            },
+            goLogin:function () {
+                if(this.getQueryString('wap')!=null && this.getQueryString('wap')!=''){
+                    window.location.href = "/dl?returnurl=template/activity/2018Activity/FebNineDraw.html";
+                }else {
+                    window.location.href = "jsmp://page=4?";
+                }
+            },
+            //获取链接上的参数
+            getQueryString : function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            },
+            //获取中奖列表
+            getAwardPeople:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL + '/activity_lottery/broadcast.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        toFrom:""
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            var broadcastList = data.map.broadcastList;
+                            for(var i=0;i<broadcastList.length;i++){
+                                broadcastList[i].phone =  broadcastList[i].phone.substring(0,3) + "****" + broadcastList[i].phone.substring(7,11)
+                            }
+                            vm.infoList = broadcastList;
+                            vm.$nextTick(function(){
+                                if(vm.infoList.length ==1){
+                                    return;
+                                }
+                                $('.notice-box').find('.infoScoll').each(function (i) {
+                                    var height = parseFloat($(this).css('height'));
+                                    $(this).css({
+                                        top: (i * height) + 'px'
+                                    })
+                                    var that = this;
+                                    window.setInterval(function () {
+                                        var top = parseFloat($(that).css('top'));
+
+                                        $(that).animate({
+                                            top: (top - height) + 'px'
+                                        }, 500, function () {
+                                            var top = parseFloat($(that).css('top'));
+                                            if (top <= (height * (-1))) {
+                                                $(that).css({ top: (vm.infoList.length - 1) * height + 'px' });
+                                            }
+                                            if (top == 0) {
+                                                $(that).css({ zIndex: 50 });
+                                            }
+                                            else{
+                                                $(that).css({ zIndex: 0 });
+                                            }
+                                        })
+                                    }, 2500)
+                                })
+                            })
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                })
+            },
+            //获取中奖次数
+            getDrawTime:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL + '/activity_lottery/getLotteryTimes.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        uid: this.uid,
+                        token: this.token,
+                        toFrom:''
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                          vm.hasLotteryTimes = data.map.hasLotteryTimes; //已抽奖次数
+                          vm.lastLotteryTimes = data.map.lastLotteryTimes;
+                          vm.openChestTimes = data.map.openChestTimes;
+                          vm.chest_1 = data.map.chest_1;
+                          vm.chest_2 = data.map.chest_2;
+                          vm.chest_3 = data.map.chest_3;
+                          vm.chest_4 = data.map.chest_4;
+                          var precent = vm.lastLotteryTimes/ (vm.hasLotteryTimes + vm.lastLotteryTimes) * 100;
+                          $('#line-img').css('width',precent + '%');
+                        }else {
+                            if(data.errorCode == '9998'){
+                                vm.loginDialog = true;
+                            }
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                })
+            },
+            //获取自身中奖信息
+            getAwardInfo:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL + '/activity_lottery/getMyLoggeryLog.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        uid: this.uid,
+                        token: this.token,
+                        toFrom:''
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            vm.myLotteryLogList = data.map.myLotteryLogList;
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                })
+            },
+            //开宝箱
+            openBox: function (id) {
+                var vm = this;
+                $.ajax({
+                    url: baseURL + '/activity_lottery/openChest.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        uid: this.uid,
+                        token: this.token,
+                        toFrom:'',
+                        chestId: id
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            vm.getDrawTime();
+                            vm.awardId = id;
+                            vm.awardOpen = true;
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                })
+            },
+            //点击抽奖
+            drawClick:function () {
+                if(!this.hsLogin){
+                    if(this.getQueryString('wap')!=null && this.getQueryString('wap')!=''){
+                        window.location.href = "/dl?returnurl=template/activity/2018Activity/FebNineDraw.html";
+                    }else {
+                        window.location.href = "jsmp://page=4?";
+                    }
+                }else {  //登陆成功
+                    if(this.lastLotteryTimes == 0){
+                        this.validError = true;
+                        this.validErrorInfo = '抽奖次数已用完';
+                        return false;
+                    }
+                    if(this.isClick){  //抽奖还没结束，禁止再次点击
+                        return false;
+                    }
+                    this.isClick = true;
+                    var vm = this;
+                    $.ajax({
+                        url: baseURL + '/activity_lottery/drawALottery.dos',
+                        type: 'post',
+                        dataType: "json",
+                        data: {
+                            version:"1.0.0",
+                            channel:3,
+                            uid: this.uid,
+                            token: this.token,
+                            toFrom:''
+                        },
+                        success: function (data) {
+                            if (data.success) {
+                                vm.awardId = data.map.id;
+                                switch (vm.awardId) {
+                                    case 1: vm.listCount = 1; break;
+                                    case 2: vm.listCount = 12; break;
+                                    case 3: vm.listCount = 9; break;
+                                    case 4: vm.listCount = 4; break;
+                                    case 5: vm.listCount = 8; break;
+                                    case 6: vm.listCount = 7; break;
+                                    case 7: vm.listCount = 11; break;
+                                    case 8: vm.listCount = 2; break;
+                                    case 9: vm.listCount = 10; break;
+                                    case 10: vm.listCount = 3; break;
+                                    case 11: vm.listCount = 6; break;
+                                    default: vm.listCount = 5; break;
+                                };
+                                vm.timeVal = 100;
+                                vm.drawTurn();
+                                vm.getDrawTime();
+                            }else {
+                                if(data.errorCode == '9998'){
+                                    vm.loginDialog = true;
+                                }
+                            }
+                        },
+                        error:function (data) {
+
+                        }
+                    })
+                }
+            },
+            //九宫格转动
+            drawTurn:function () {
+                var me = this;
+                $('#' + me.listCount).removeClass('select');
+                if ((me.time++) >= 12) {
+                    me.time = 1;
+                    me.count ++;
+                }
+                if(me.count >= 2){
+                    if(me.listCount<=5){  //当id小于5时，多转一圈，再变慢
+                        if(me.time> me.listCount + 6){
+                            me.timeVal = 300;
+                        }else {
+                            if(me.timeVal == 300){
+                                if(me.listCount == me.time){
+                                    me.count = 0;
+                                    me.$nextTick(function(){
+                                        $('#' + me.listCount).removeClass('active');
+                                        var fcount = 1;
+                                        var inter = window.setInterval(function () {   //中奖以后要闪烁几次
+                                            ++ fcount;
+                                            if(fcount%2 ==0){
+                                                $('#' + me.listCount).addClass('select');
+                                            }else {
+                                                $('#' + me.listCount).removeClass('select');
+                                            }
+                                            if(fcount>6){
+                                                $('#' + me.listCount).addClass('select');
+                                                me.awardOpen = true;
+                                                me.isClick = false;
+                                                window.clearInterval(inter)
+                                            }
+                                        }, 150)
+                                    })
+                                    me.getAwardInfo(); //获取自身中奖信息
+                                    window.clearTimeout(interval);
+                                    return false;
+                                }
+                            }
+                        }
+                    }else {   //当id大于5时，间隔第5个的时候再变慢
+                        if(me.time> me.listCount -5){
+                            me.timeVal = 300;
+                            if(me.listCount == me.time){
+                                me.count = 0;
+                                window.clearTimeout(interval);
+                                me.$nextTick(function(){
+                                    $('#' + me.listCount).removeClass('active');
+                                    var fcount = 1;
+                                    var inter = window.setInterval(function () {  //中奖以后要闪烁几次
+                                        ++ fcount;
+                                        if(fcount%2 ==0){
+                                            $('#' + me.listCount).addClass('select');
+                                        }else {
+                                            $('#' + me.listCount).removeClass('select');
+                                        }
+                                        if(fcount>6){
+                                            me.awardOpen = true;
+                                            me.isClick = false;
+                                            $('#' + me.listCount).addClass('select');
+                                            window.clearInterval(inter);
+                                        }
+                                    }, 150)
+                                })
+                                me.getAwardInfo(); //获取自身中奖信息
+                                return false;
+                            }
+                        }
+                    }
+                }
+                var interval = setTimeout(this.drawTurn,me.timeVal);
+            }
+        },
+        watch: {
+            validError:function (curr,old) {
+                var vm =this;
+                if(curr==true){
+                    window.setTimeout(function() {
+                        vm.validError = false;
+                    }, 2000);
+                }
+            }
+        }
+    })
+</script>
+</html>
