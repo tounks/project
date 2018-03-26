@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+    <title>聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font: 12px/1.5 "Microsoft Yahei", arial, tahoma, "Hiragino Sans GB";
+            color: #323232;
+            background: rgb(248,248,248);
+        }
+        body {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 1rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        input {
+            outline: none;
+            border: none;
+        }
+
+        [v-cloak] {
+            display:none;
+        }
+
+        @media only screen and (max-width: 359px) {
+            html {
+                font-size: 12px;
+            }
+        }
+        @media only screen and (min-width: 360px) and (max-width: 374px) {
+            html {
+                font-size: 13.5px;
+            }
+        }
+        @media only screen and (min-width: 375px) and (max-width: 399px) {
+            html {
+                font-size: 14.0625px;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 479px) {
+            html {
+                font-size: 15px;
+            }
+        }
+        @media only screen and (min-width: 480px) and (max-width: 539px) {
+            html {
+                font-size: 18px;
+            }
+        }
+        @media only screen and (min-width: 540px) and (max-width: 639px) {
+            html {
+                font-size: 20.25px;
+            }
+        }
+        @media only screen and (min-width: 640px) and (max-width: 719px) {
+            html {
+                font-size: 24px;
+            }
+        }
+        @media only screen and (min-width: 720px) {
+            html {
+                font-size: 27px;
+            }
+        }
+        .body-hidden{
+            overflow: hidden;
+        }
+        .common-head {
+            height: 3.40741rem;
+            background: #FFFFFF;
+            color: #333333;
+            width: 100%;
+            max-width: 750px;
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .common-head i{
+            z-index: 5;
+            width: 0.7rem;
+            height: 1.17rem;
+            display: block;
+            position: absolute;
+            background-image: url(../../../register/images/icon_left.png);
+            background-size: cover;
+            top: 50%;
+            left: 2rem;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+        }
+        .common-head span{
+            text-align: center;
+            font-size: 1.28rem;
+            line-height: 3.40741rem;
+            position: absolute;
+            width: 100%;
+        }
+        .maskErrorDl {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            width: 100%;
+            height: 100%;
+        }
+        .maskErrorDl .maskErrorDl-box {
+            width: 14.81481rem;
+            /* height: 0.5rem; */
+            background: #f2f2f2;
+            color: #090909;
+            overflow: hidden;
+            margin: 27% auto;
+            font-size: 1.18519rem;
+            text-align: center;
+            /* padding: 0.24691rem 0 1.48148rem; */
+            border-radius: 0.24691rem;
+            height: 2rem;
+        }
+        .maskErrorDl .maskErrorDl-box p {
+            margin: 0rem auto;
+            line-height: 2rem;
+        }
+        .maskErrorDl .maskErrorDl-box a {
+            width: 14.81481rem;
+            height: 2.22222rem;
+            text-align: center;
+            line-height: 2.22222rem;
+            background: #ffa200;
+            font-size: 1.23457rem;
+            color: #fff5dc;
+            display: block;
+            margin: 2.9rem auto;
+            border-radius: 0.24691rem;
+        }
+        .maskErrorD2 {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+        }
+        .maskErrorD2 .re-login {
+            position: absolute;
+            top: 37%;
+            background-color: white;
+            width: 12rem;
+            left: 50%;
+            transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            /* IE 9 */
+            -moz-transform: rotate(7deg) translateX(-50%);
+            /* Firefox */
+            -webkit-transform: translateX(-50%);
+            /* Safari 和 Chrome */
+            -o-transform: translateX(-50%);
+            padding: 1rem 1.5rem 1rem;
+        }
+        .maskErrorD2 .re-login .tip {
+            font-size: 1.2rem;
+            color: #fb6734;
+        }
+        .maskErrorD2 .re-login .login-button {
+            text-align: center;
+        }
+        .maskErrorD2 .re-login .login-button .button {
+            display: inline-block;
+            text-align: center;
+            width: 11rem;
+            margin-top: 0.5rem;
+            height: 2.3rem;
+            background-color: #fb6734;
+            color: white;
+            line-height: 2.3rem;
+            font-size: 1rem;
+        }
+        .turn img{
+            width: 100%;
+            display: block;
+        }
+        .turn_draw {
+            position: relative;
+        }
+        .turn_draw .pay-scoll{
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+            max-width: 750px;
+            position: absolute;
+            width: 80%;
+            top: 6.39%;
+            left: 4rem;
+        }
+        .turn_draw .pay-scoll .info{
+            height: 1.5rem;
+            margin: 0 auto;
+            width: 83%;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        .turn_draw .pay-scoll .info .infoScoll{
+            position: absolute;
+            overflow: hidden;
+        }
+        .draw_num{
+            position: absolute;
+            font-size: 1.3rem;
+            color: white;
+            right: 7.9%;
+            top: 15.2%;
+            font-weight: bold;
+            width: 12%;
+            text-align: center;
+         }
+        .draw_bg{
+            position: absolute;
+            text-align: center;
+            top: 22%;
+            overflow: hidden;
+        }
+        .draw_bg img{
+            width: 76%;
+            display: inline-block;
+        }
+        .draw_click img{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            top: 38%;
+            width: 5.355rem;
+            height: 7rem;
+            z-index: 3;
+        }
+        .draw_record{
+            position: relative;
+        }
+        .draw_record .record-list{
+            position: absolute;
+            top: 4.8rem;
+            color: black;
+            left: 51.2%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            width: 70%;
+            text-align: left;
+            font-size: 0.9rem;
+            height: 8.6rem;
+            overflow-y: auto;
+        }
+        .draw_record .record-list::-webkit-scrollbar {
+            width: 0.5rem;
+            height: 8.6rem;
+        }
+        /* 滚动槽 */
+        .draw_record .record-list::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(255,166,144, 0.3);
+            border-radius: 5px;
+        }
+        /* 滚动条滑块 */
+        .draw_record .record-list::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(255,166,144, 0.6);
+            -webkit-box-shadow: inset 0 0 6px rgba(255,166,144, 1);
+        }
+        .draw_record .record-list div{
+            line-height: 1.5rem;
+        }
+        .tips-wapper{
+            position: fixed;
+            overflow: auto;
+            z-index: 51;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .red-dialog{
+            position: fixed;
+            width:100%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            z-index: 100;
+            top: 16%;
+            max-width: 500px;
+        }
+        .red-dialog .close-button{
+            position: absolute;
+            width: 16rem;
+            height: 4rem;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            bottom: 11%;
+            cursor: pointer;
+        }
+        .reward-dialog{
+            position: fixed;
+            width: 68%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            z-index: 100;
+            top: 16%;
+            max-width: 500px;
+        }
+        .reward-dialog img{
+            display: block;
+            width: 100%;
+        }
+        .reward-dialog .reward-img{
+            position: absolute;
+            height: 26.43%;
+            width: 45.45%;
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/yuan10.png);
+            background-size: cover;
+            top: 9.3%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+        }
+        .reward-dialog .reward-img.yuan10{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/yuan10.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.awatch{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/awatch.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.yuan100{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/yuan100.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.jd500{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/jd500.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.robot{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/robot.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.sorry{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/sorry.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.jd50{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/jd50.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.kindle{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/kindle.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-img.yuan200{
+            background-image: url(../../../images/activity/2018Activity/Mar/turnDraw/award/yuan200.png);
+            background-size: cover;
+        }
+        .reward-dialog .reward-sorry{
+            position: absolute;
+            bottom: 43%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            width: 100%;
+            text-align: center;
+            color: #ffa690;
+        }
+        .reward-dialog .reward-sorry p{
+            font-size: 1.12rem;
+        }
+        .reward-dialog .reward-content{
+            position: absolute;
+            bottom: 40%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            width: 100%;
+            text-align: center;
+            color: #ffa690;
+            /* font-size: 2rem; */
+        }
+        .reward-dialog .reward-content p{
+            font-size: 1.12rem;
+        }
+        .reward-dialog .reward-content p span{
+            font-weight: bold;
+        }
+        .reward-dialog .reward-button{
+            position: absolute;
+            width: 12rem;
+            height: 3rem;
+            bottom: 25%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+        }
+        .reward-dialog .close-button{
+            position: absolute;
+            width: 5rem;
+            height: 4rem;
+            bottom: 0%;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            cursor: pointer;
+        }
+        .imm-invest{
+            position: fixed;
+            height: 5rem;
+            width: 100%;
+            max-width: 750px;
+            bottom: 0%;
+            background-color: white;
+            z-index: 50;
+            text-align: center;
+        }
+        .imm-invest img{
+            width: 97%;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak >
+    <div class="common-head" v-show="isWap" >
+        <i @click="back()"></i>
+        <span>{{title}}</span>
+    </div>
+    <div class="turn">
+        <img src="../../../images/activity/2018Activity/Mar/turnDraw/turn_1.png" />
+        <div class="turn_draw">
+          <!--滚动条-->
+          <div class="pay-scoll notice-box">
+            <div class="info">
+                <div class="infoScoll" v-for="item in infoList">
+                    <span style="font-size: 1rem">恭喜 {{item.phone}} 获得{{item.awardName}}</span>
+                </div>
+            </div>
+          </div>
+
+          <!--中奖次数-->
+          <div class="draw_num">{{lastLotteryTimes}}</div>
+
+          <!--转盘抽奖-->
+          <div class="draw_bg">
+              <img src="../../../images/activity/2018Activity/Mar/turnDraw/award_bg.png" id="draw_img"/>
+          </div>
+
+          <div class="draw_click" @click="drawClick()">
+             <img src="../../../images/activity/2018Activity/Mar/turnDraw/draw_click.png">
+          </div>
+          <img src="../../../images/activity/2018Activity/Mar/turnDraw/turn_2.png" />
+
+        </div>
+
+        <!--立即投资-->
+        <div class="imm-invest">
+            <div @click="immInvest()">
+              <img src="../../../images/activity/2018Activity/Mar/turnDraw/imm-invest.png">
+            </div>
+        </div>
+
+        <!--中奖纪录-->
+        <div class="draw_record">
+            <div class="record-list">
+                <div style="text-align: center;" v-show="!hsLogin">暂未登录，请登录后查看记录！</div>
+                <div style="margin-left: 1rem;" v-show="hsLogin && myLotteryLogList.length == 0">暂无中奖记录，再试试可能会惊喜欧！</div>
+                <div v-show="myLotteryLogList.length != 0">
+                    <div v-for="item in myLotteryLogList">
+                        <span>{{item.addTime|timeTrans}}</span>
+                        <span style="margin-left: 1rem;">获得</span>
+                        <span>{{item.awardName}}</span>
+                    </div>
+                </div>
+            </div>
+           <img src="../../../images/activity/2018Activity/Mar/turnDraw/turn_3.png" />
+        </div>
+
+        <!--中奖弹框-->
+        <div v-show="awardOpen">
+            <div class="tips-wapper" style="z-index: 52;"></div>
+            <div class="reward-dialog">
+                <div style="position: relative">
+                    <img src="../../../images/activity/2018Activity/Mar/turnDraw/reward-dialog.png"/>
+                    <div class="reward-img" :class="{1:'yuan10',2:'awatch',3:'yuan100',4:'jd500',5:'robot',6:'sorry',7:'jd50',
+                    8:'kindle',9:'yuan200'}[award_id]"></div>
+                    <div class="reward-content" v-show="award_id != 6">
+                        <p>恭喜您获得</p>
+                        <p><span v-text="{1:'10元现金',2:'Apple Watch',3:'100元返现红包',4:'500元京东卡',5:'小米扫地机器人',6:'',7:'50元京东卡',
+                          8:'Kindle阅读器',9:'200元返现红包'}[award_id]"></span></p>
+                        <p>更多惊喜大奖等你领！</p>
+                    </div>
+                    <div class="reward-sorry" v-show="award_id == 6">
+                        <p>很遗憾</p>
+                        <p>差一点就中奖了</p>
+                    </div>
+                    <div class="reward-button" @click="holdDraw()"></div>
+                    <div class="close-button" @click="awardOpen=false"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div v-show="redOpen">
+            <div class="tips-wapper" style="z-index: 52;"></div>
+            <div class="red-dialog">
+                <div style="position:relative">
+                  <img src="../../../images/activity/2018Activity/Mar/turnDraw/red-dialog.png"/>
+                  <div class="close-button" @click="redOpen = false"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="maskErrorD2" v-show="loginDialog">
+        <div class="re-login">
+            <p class="tip">提示：</p>
+            <p>　　您的登录已过期或已在其他设备登录，请重新登录</p>
+            <div class="login-button">
+                <span class="button" @click="goLogin()">确定</span>
+            </div>
+        </div>
+    </div>
+
+    <div v-show="validError" class="maskErrorDl v-cloak" @click="validError=false">
+        <div class="maskErrorDl-box">
+            <p>{{validErrorInfo}}</p>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../../register/js/vue.min.js" ></script>
+<script type="text/javascript" src="../../../register/js/jweixin-1.0.0.js" ></script>
+<script type="text/javascript" src="../../../register/js/jquery-1.9.1.js" ></script>
+<script type="text/javascript" src="../../../js/config.js" ></script>
+
+<script>
+
+
+    Vue.filter('timeTrans', function (value) {
+        var date = new Date(value);
+        var m = date.getMonth() + 1 + '';
+        var d = date.getDate() + '';
+        var h = date.getHours() +'';
+        var Min = date.getMinutes()+ '';
+        var n = date.getSeconds() +'';
+        if(m.length == 1 ){
+            m = 0 + m
+        }
+        if(d.length == 1 ){
+            d = 0 + d
+        }
+        if(h.length == 1 ){
+            h = 0 + h
+        }
+        if(Min.length == 1 ){
+            Min = 0 + Min
+        }
+        if(n.length == 1){
+            n = 0 + n
+        }
+        return date.getFullYear()+"."+ m +"."+ d + "  " + h+':'+Min + ':' + n;
+    })
+
+    var example2 = new Vue({
+        el: '#app',
+        data: {
+            hsLogin: true,
+            title: '月末幸运抽奖',
+            isWap : false,
+            uid: '', //用户uid
+            token:'', //用户token
+            loginDialog: false, //表示重新登录
+            validError: false,
+            validErrorInfo:'',
+            infoList:[], //中奖人列表
+            myLotteryLogList:[], //中奖纪录
+            lastLotteryTimes: 0, //剩余中奖次数
+            awardOpen: false,  //中奖弹窗
+            redOpen:false,    //红包弹窗
+            award_id : 0, //1-10元现金；2-awatch;3-100元返现红包；4-500元京东卡；5-小米扫地机器人；6-很遗憾；7-50元京东卡；8-kindle；9-200元返现红包
+            award_deg: 0, //0-9;1-390;2-350;3-310;4-270;5-230;6-190;7-150;8-110;9-70
+            timeVal:10, //转盘转动的时间
+            isTurn : false, //判断是否在转圈
+            turn_deg:0, //转圈大小
+        },
+        mounted:function(){
+
+            $('#draw_img').css({
+                'transform':     'rotate('+9+'deg)',
+                '-moz-transform':'rotate('+9+'deg)',
+                '-o-transform':  'rotate('+9+'deg)',
+                '-webkit-transform':  'rotate('+9+'deg)'
+            });
+
+            document.title = '聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……';
+            var currUrl = window.location.href;
+            var user = localStorage.getItem("ngStorage-user");
+            if(this.getQueryString('wap') != null && this.getQueryString('wap')!=''){ //h5有wap字段
+                this.isWap = true;
+                if(user == '{}' || JSON.parse(user) == null){
+                    this.hsLogin = false;
+                }else {
+                    user = JSON.parse(user); //转为json串
+                    this.uid = user.member.uid;
+                    this.token = user.token;
+                    this.hsLogin = true;
+                    this.getDrawTime(); //获取中奖次数
+                    this.getMyRecord(); //获取中奖纪录
+                    this.getRedPacket(); //领取红包
+                }
+            }else { //app没有wap,直接传uid过来
+                var uid = this.getQueryString('uid');
+                if(uid == null || uid ==""){
+                    this.hsLogin = false;
+                    //alert( this.uid+ "****"+this.token)
+                }else{
+                    this.uid = uid;
+                    this.token = this.getQueryString('token');
+                    //alert( this.uid+ "****"+this.token)
+                    this.hsLogin = true;
+                    this.getDrawTime(); //获取中奖次数
+                    this.getMyRecord(); //获取中奖纪录
+                    this.getRedPacket(); //领取红包
+                }
+            }
+
+            this.getAwardList();
+
+//            if(localStorage.getItem("drawRedOpen") == null){ //判断第一次打开弹窗
+//                this.redOpen = true;
+//                localStorage.setItem("drawRedOpen",true);
+//            }
+
+            //页面配置
+            $.ajax({
+                url: '/product/signWeChat.dos',
+                type: 'post',
+                data: { url: currUrl, version: '2.0.0', channel: '3' },
+                success: function (data) {
+                    if (data.success) {
+                        wx.config({
+                            debug: false,
+                            appId: data.map.appid,
+                            timestamp: data.map.timestamp,
+                            nonceStr: data.map.noncestr,
+                            signature: data.map.sign,
+                            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                        });
+                        wx.ready(function () {
+                            wx.onMenuShareTimeline({
+                                desc:  '月末幸运抽奖',
+                                title:  '聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/MarTurnDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Mar/turnDraw/turn_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareAppMessage({
+                                title:  '月末幸运抽奖',
+                                desc:  '聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/MarTurnDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Mar/turnDraw/turn_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareQQ({
+                                title:  '月末幸运抽奖',
+                                desc:  '聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/MarTurnDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Mar/turnDraw/turn_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareWeibo({
+                                title:  '月末幸运抽奖',
+                                desc:  '聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/MarTurnDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Mar/turnDraw/turn_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareQZone({
+                                title:  '月末幸运抽奖',
+                                desc:  '聪明钱月末红包大派送！投资抽奖惊喜连连、apple watch 、小米扫地机器人等大礼抽不停……',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/MarTurnDraw.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/2018Activity/Mar/turnDraw/turn_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                        })
+
+                    };
+                }
+            });
+
+        },
+        methods: {
+            //立即返回
+            back:function () {
+                window.location.href = "/main/home";
+            },
+            //立即投资
+            immInvest:function () {
+                var vm = this;
+                if(this.getQueryString('wap')!= null && this.getQueryString('wap')!=''){
+                    window.location.href = "/main/bankBillList";
+                }else {
+                    window.location.href = "jsmp://page=2?";
+                }
+            },
+            goLogin:function () {
+                if(this.getQueryString('wap')!=null && this.getQueryString('wap')!=''){
+                    window.location.href = "/dl?returnurl=template/activity/2018Activity/MarTurnDraw.html";
+                }else {
+                    window.location.href = "jsmp://page=4?";
+                }
+            },
+            //获取链接上的参数
+            getQueryString : function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            },
+            //继续抽奖
+            holdDraw:function () {
+                if(window.screen.width <=330 && (this.getQueryString('wap') == null || this.getQueryString('wap') == '')){ //对IPhone5 APP里面的处理
+                    $(window).scrollTop(200); //滚动到顶部
+                }else {
+                    $(window).scrollTop(300); //滚动到顶部
+                }
+                this.drawClick();
+            },
+            //领取红包
+            getRedPacket:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL+ '/march_lottery/clickToGetAward.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        uid: this.uid,
+                        token:this.token
+                    },
+                    success: function (data) {
+                        if(data.success){
+                            vm.redOpen = true; //领取成功打开弹窗
+                        }else {
+                            vm.redOpen = false;
+                        }
+                    },
+                    error:function (data) {
+                        vm.redOpen = false;
+                    }
+                });
+            },
+            //转盘抽奖
+            drawClick:function(){
+                if(!this.hsLogin){  //未登录
+                    if(this.getQueryString('wap')!=null && this.getQueryString('wap')!=''){
+                        window.location.href = "/dl?returnurl=template/activity/2018Activity/MarTurnDraw.html";
+                    }else {
+                        window.location.href = "jsmp://page=4?";
+                    }
+                }else {
+                     if(this.isTurn){ //如果还在转圈则停止
+                         return false;
+                     }
+                     if(this.lastLotteryTimes == 0){
+                        this.awardOpen = false; //中奖弹框关闭
+                        this.validError = true;
+                        this.validErrorInfo = '暂无抽奖机会';
+                        return false;
+                    }
+                    var vm = this;
+                    vm.isTurn = true;  //表示转盘已经开始转动
+                    vm.awardOpen = false; //关闭弹窗
+                    $.ajax({
+                        url: baseURL+ '/march_lottery/drawALottery.dos',
+                        type: 'post',
+                        dataType: "json",
+                        data: {
+                            version:"1.0.0",
+                            channel:3,
+                            uid: this.uid,
+                            token:this.token
+                        },
+                        success: function (data) {
+                            if(data.success){
+                                var id = data.map.id;
+                                vm.getDrawTime(); //获取抽奖次数
+                                switch (id) { ///1-10元现金；2-awatch;3-100元返现红包；4-500元京东卡；5-小米扫地机器人；6-很遗憾；7-50元京东卡；8-kindle；9-200元返现红包
+                                    case 16: vm.award_deg = 390;vm.award_id= 1; break;
+                                    case 23: vm.award_deg = 350;vm.award_id= 2; break;
+                                    case 18: vm.award_deg = 310;vm.award_id= 3; break;
+                                    case 20: vm.award_deg = 270;vm.award_id= 4; break;
+                                    case 22: vm.award_deg = 230;vm.award_id= 5; break;
+                                    case 24: vm.award_deg = 190;vm.award_id= 6; break;
+                                    case 17: vm.award_deg = 150;vm.award_id= 7; break;
+                                    case 21: vm.award_deg = 110;vm.award_id= 8; break;
+                                    case 19: vm.award_deg = 70;vm.award_id= 9; break;
+                                };
+                                vm.drawTurn();
+                            }else {
+                                if(data.errorCode == '9998'){
+                                    vm.loginDialog = true;
+                                    vm.isTurn = false;
+                                }else if(data.errorCode == '7777'){ //奖品没有，转到很遗憾
+                                    vm.award_deg = 190;
+                                    vm.award_id= 6;
+                                    vm.getDrawTime(); //获取抽奖次数
+                                    vm.drawTurn();
+                                }else {
+                                    vm.isTurn = false;
+                                    vm.validError = true;
+                                    vm.validErrorInfo = data.errorMsg;
+                                }
+                            }
+                        },
+                        error:function (data) {
+                            vm.isTurn = false;
+                        }
+                    });
+                }
+            },
+            //转盘转动
+            drawTurn:function () {
+                var me = this;
+                if(me.turn_deg >2 * 360 ){
+                    me.timeVal = 20;
+                    //me.turn_deg = me.turn_deg + (1+ 10*(2- (me.turn_deg+ me.award_deg)/720));
+                    me.turn_deg = me.turn_deg + 1+ 20 * (1- me.turn_deg/(1080 + me.award_deg)); //缓慢减少转速
+                    if(me.turn_deg >= 1080 + me.award_deg){
+                        me.turn_deg = 0;
+                        me.time = 0;
+                        window.clearTimeout(interval);
+                        me.getMyRecord(); //获取我的中奖纪录
+                        setTimeout(function () {
+                            me.awardOpen = true;
+                            me.isTurn = false;
+                        },500)
+                        return;
+                    }
+                }else {
+                    me.timeVal = 20;
+                    me.turn_deg = me.turn_deg + 10;
+                }
+                $('#draw_img').css({
+                    'transform':     'rotate('+me.turn_deg+'deg)',
+                    '-moz-transform':'rotate('+me.turn_deg+'deg)',
+                    '-o-transform':  'rotate('+me.turn_deg+'deg)',
+                    '-webkit-transform':  'rotate('+me.turn_deg+'deg)'
+                });
+                //document.getElementById('draw_img').style.transform="rotate("+me.turn_deg+"deg)";
+                var interval = setTimeout(this.drawTurn,me.timeVal);
+            },
+            //获取我的中奖纪录
+            getMyRecord:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL+ '/march_lottery/getMyLoggeryLog.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        uid: this.uid,
+                        token:this.token
+                    },
+                    success: function (data) {
+                        if(data.success){
+                            vm.myLotteryLogList = data.map.myLotteryLogList;
+                        }else {
+                            if(data.errorCode == '9998'){
+                                vm.loginDialog = true;
+                            }else {
+                                vm.validError = true;
+                                vm.validErrorInfo = data.errorMsg;
+                            }
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                });
+            },
+            //获取中奖人列表
+            getAwardList:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL+ '/march_lottery/broadcast.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                    },
+                    success: function (data) {
+                        if(data.success){
+                            var broadcastList = data.map.broadcastList;
+                            for(var i=0;i<broadcastList.length;i++){
+                                broadcastList[i].phone =  broadcastList[i].phone.substring(0,3) + "****" + broadcastList[i].phone.substring(7,11)
+                            }
+                            vm.infoList = broadcastList;
+
+                            vm.$nextTick(function(){
+                                if(vm.infoList.length ==1){
+                                    return;
+                                }
+                                $('.notice-box').find('.infoScoll').each(function (i) {
+                                    var height = parseFloat($(this).css('height'));
+                                    $(this).css({
+                                        top: (i * height) + 'px'
+                                    })
+                                    var that = this;
+                                    window.setInterval(function () {
+                                        var top = parseFloat($(that).css('top'));
+
+                                        $(that).animate({
+                                            top: (top - height) + 'px'
+                                        }, 500, function () {
+                                            var top = parseFloat($(that).css('top'));
+                                            if (top <= (height * (-1))) {
+                                                $(that).css({ top: (vm.infoList.length - 1) * height + 'px' });
+                                            }
+                                            if (top == 0) {
+                                                $(that).css({ zIndex: 50 });
+                                            }
+                                            else{
+                                                $(that).css({ zIndex: 0 });
+                                            }
+                                        })
+                                    }, 2500)
+                                })
+                            })
+
+                        }else {
+                            vm.validError = true;
+                            vm.validErrorInfo = data.errorMsg;
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                });
+            },
+            //获取中奖次数
+            getDrawTime:function () {
+                var vm = this;
+                $.ajax({
+                    url: baseURL+ '/march_lottery/getLotteryTimes.dos',
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        version:"1.0.0",
+                        channel:3,
+                        uid: this.uid,
+                        token:this.token
+                    },
+                    success: function (data) {
+                        if(data.success){
+                            vm.lastLotteryTimes = data.map.lastLotteryTimes;
+                        }else {
+                            vm.validError = true;
+                            vm.validErrorInfo = data.errorMsg;
+                        }
+                    },
+                    error:function (data) {
+
+                    }
+                });
+            }
+        },
+        watch: {
+            validError:function (curr,old) {
+                var vm =this;
+                if(curr==true){
+                    window.setTimeout(function() {
+                        vm.validError = false;
+                    }, 2000);
+                }
+            }
+        }
+    })
+</script>
+</html>
