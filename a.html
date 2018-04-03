@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+    <title>3月投资排行榜</title>
+    <link rel="stylesheet" type="text/css" href="../../../register/js/swiper.css"/>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font: 12px/1.5 "Microsoft Yahei", arial, tahoma, "Hiragino Sans GB";
+            color: #323232;
+            background: rgb(248,248,248);
+        }
+        body {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 1rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        input {
+            outline: none;
+            border: none;
+        }
+
+        [v-cloak] {
+            display:none;
+        }
+
+        @media only screen and (max-width: 359px) {
+            html {
+                font-size: 12px;
+            }
+        }
+        @media only screen and (min-width: 360px) and (max-width: 374px) {
+            html {
+                font-size: 13.5px;
+            }
+        }
+        @media only screen and (min-width: 375px) and (max-width: 399px) {
+            html {
+                font-size: 14.0625px;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 479px) {
+            html {
+                font-size: 15px;
+            }
+        }
+        @media only screen and (min-width: 480px) and (max-width: 539px) {
+            html {
+                font-size: 18px;
+            }
+        }
+        @media only screen and (min-width: 540px) and (max-width: 639px) {
+            html {
+                font-size: 20.25px;
+            }
+        }
+        @media only screen and (min-width: 640px) and (max-width: 719px) {
+            html {
+                font-size: 24px;
+            }
+        }
+        @media only screen and (min-width: 720px) {
+            html {
+                font-size: 27px;
+            }
+        }
+        .body-hidden{
+            overflow: hidden;
+        }
+        .common-head {
+            height: 3.40741rem;
+            background: #FFFFFF;
+            color: #333333;
+            width: 100%;
+            max-width: 750px;
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .common-head i{
+            z-index: 5;
+            width: 0.7rem;
+            height: 1.17rem;
+            display: block;
+            position: absolute;
+            background-image: url(../../../register/images/icon_left.png);
+            background-size: cover;
+            top: 50%;
+            left: 2rem;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+        }
+        .common-head span{
+            text-align: center;
+            font-size: 1.28rem;
+            line-height: 3.40741rem;
+            position: absolute;
+            width: 100%;
+        }
+        .div-total{
+            width: 100%;
+            overflow-y: scroll
+        }
+        .div-total::-webkit-scrollbar {
+            width: 0rem;
+            height: 0rem;
+        }
+        .div-title{
+            width: 29.7rem;
+            border-bottom: 1px solid #CCC;
+        }
+        .div-inline{
+             display: inline-block;
+             width: 5.5rem;
+             height: 3rem;
+             line-height: 3rem;
+             font-size: 1rem;
+            text-align: center;
+            color: #CCC;
+        }
+        .div-inline span{
+            display: inline-block;
+        }
+        .div-inline.active{
+            width: 6.5rem;
+        }
+        .div-inline.active span{
+            font-size: 1.12rem;
+            color: black;
+            border-bottom: 3px solid black;
+            box-sizing: border-box;
+            height: 3.2rem;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            background:#fff;
+            position: relative;
+            margin-top: 0.3rem;
+        }
+        .swiper-slide{
+            width:100%;
+            height: 100%;
+            background-color: #ffffff;
+            background-size:100% 100%;
+            color: #666666;
+
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        .div-comm{
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div>
+        <div style="" class="div-comm">
+            <div class="common-head" v-show="isWap" >
+                <i @click="back()"></i>
+                <span>{{title}}</span>
+            </div>
+            <div class="div-total">
+                <div class="div-title">
+                    <div class="div-inline" :class="{true:'active',false:''}[index==0]" @click="choose(0)"><span>银行存管</span></div>
+                    <div class="div-inline" :class="{true:'active',false:''}[index==1]" @click="choose(1)"><span>资质保证</span></div>
+                    <div class="div-inline" :class="{true:'active',false:''}[index==2]" @click="choose(2)"><span>风控安全</span></div>
+                    <div class="div-inline" :class="{true:'active',false:''}[index==3]" @click="choose(3)"><span>技术保障</span></div>
+                    <div class="div-inline" :class="{true:'active',false:''}[index==4]" @click="choose(4)"><span>人工智能</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <section class="swiper-slide swiper-slide1">
+                    <img src="../../../images/activity/2018Activity/Apr/a/a1.png"/>
+                </section>
+                <section class="swiper-slide swiper-slide2">
+                    <img src="../../../images/activity/2018Activity/Apr/a/a2.png"/>
+                </section>
+
+                <section class="swiper-slide swiper-slide3">
+                    <img src="../../../images/activity/2018Activity/Apr/a/a3.png"/>
+                </section>
+                <section class="swiper-slide swiper-slide4">
+                    <img src="../../../images/activity/2018Activity/Apr/a/a4.png"/>
+                </section>
+                <section class="swiper-slide swiper-slide5">
+                    <img src="../../../images/activity/2018Activity/Apr/a/a5.png"/>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../../../register/js/vue.min.js" ></script>
+<script type="text/javascript" src="../../../register/js/swiper.js"></script>
+<script type="text/javascript" src="../../../register/js/jquery-1.9.1.js" ></script>
+
+<script>
+
+    var mySwiper;
+    var example2 = new Vue({
+        el: '#app',
+        data: {
+            hsLogin: false,
+            title: '安全保障',
+            isWap : false,
+            index:0
+        },
+        beforeCreate: function () {
+
+        },
+        mounted:function(){
+            var user = localStorage.getItem("ngStorage-user");
+            if(this.getQueryString('wap') != null && this.getQueryString('wap')!=''){ //h5有wap字段
+                this.isWap = true;
+                if(user == '{}' || JSON.parse(user) == null){
+                    this.hsLogin = false;
+                }else {
+                    user = JSON.parse(user); //转为json串
+                    this.uid = user.member.uid;
+                    this.token = user.token;
+                    this.hsLogin = true;
+                }
+            }else { //app没有wap,直接传uid过来
+                var uid = this.getQueryString('uid');
+                if(uid == null || uid ==""){
+                    this.hsLogin = false;
+                    //alert( this.uid+ "****"+this.token)
+                }else{
+                    this.uid = uid;
+                    this.token = this.getQueryString('token');
+                    //alert( this.uid+ "****"+this.token)
+                    this.hsLogin = true;
+                }
+            }
+            document.title = '安全保障';
+            var vm = this;
+            var height = document.documentElement.clientHeight - $(".div-comm").height() +'px'
+           $(".swiper-container").css('height', height)
+            mySwiper = new Swiper ('.swiper-container', {
+                direction : 'vertical',
+                pagination: '.swiper-pagination',
+                //virtualTranslate : true,
+                mousewheelControl : true,
+                watchSlidesProgress: true,
+                onProgress: function(swiper){
+                    // console.log(swiper.activeIndex)
+                    for (var i = 0; i < swiper.slides.length; i++){
+                        // console.log(i)
+                        var slide = swiper.slides[i];
+                        var progress = slide.progress;
+                        var translate = progress*swiper.height/4;
+                        scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+                        var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+                        slide.style.opacity = opacity;
+                        es = slide.style;
+                        es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+
+                    }
+                },
+                onSetTransition: function(swiper, speed) {
+                    for (var i = 0; i < swiper.slides.length; i++){
+                        es = swiper.slides[i].style;
+                        es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+                    }
+                },
+                on: {
+                    slideChangeTransitionEnd: function(swiper){
+                        vm.choose(this.activeIndex)
+                    },
+                    //        onSlideChangeStart: function(swiper){
+                    //             console.log(swiper.activeIndex)
+                    //         },
+                    //        onTransitionStart:function (swiper) {
+                    //            if(swiper.activeIndex == 11 ){
+                    //                $('.resize').hide()
+                    //            }else{
+                    //                $('.resize').show()
+                    //            }
+                }
+            })
+        },
+
+        methods: {
+            //立即返回
+            back:function () {
+                window.location.href = "/main/home";
+            },
+            //获取链接上的参数
+            getQueryString : function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            },
+           choose:function (index) {
+               this.index =  index;
+               mySwiper.slideTo(index, 1000, false);//切换到第一个slide，速度为1秒
+               if(index==1){
+                   $('.div-total').scrollLeft(0);
+               }else if(index==3){
+                   $('.div-total').scrollLeft($('.div-total')[0].scrollWidth);
+               }
+           }
+        },
+    })
+</script>
+</html>
