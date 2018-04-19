@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="react/react.js"></script>
+    <script src="react/react-dom.js"></script>
+    <script src="react/browser.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=DxWReEz71oB1sWOcCzj6xgeYf92aqqpG"></script>
+    <script src="react/react-bmap.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+        const React = window.React;
+        const { Map, Marker, NavigationControl, InfoWindow,Polyline } = window.ReactBMap;
+
+        var Hello = React.createClass({
+            getInitialState: function () {
+                return {
+                    like:1,
+                    line:
+                        [
+                            {lng: 116.403119, lat: 39.929543},
+                            {lng: 116.265139, lat: 39.978658},
+                             {lng: 116.217996, lat: 39.904309}
+                        ]
+
+                };
+            },
+            componentDidMount: function () {
+                this.timer = setInterval(function () {
+                    this.setState({
+                        like: this.state.like+1
+                    });
+                    console.log(this.state.like)
+                    var line = this.state.line;
+                    var lng = 116.259996 - this.state.like * 0.01;
+                    var lat = 39.834309 - this.state.like * 0.01;
+                    line.push(
+                        {lng: lng, lat: lat}
+                    )
+//                    console.log(line)
+                    this.setState({
+                        line: line
+                    });
+                }.bind(this), 2000);
+            },
+
+            render: function () {
+                return (
+                        <div>
+                          <Map center={{lng: 116.402544, lat: 39.928216}} zoom="11">
+                            <Marker position={{lng: 116.402544, lat: 39.928216}} />
+                            <NavigationControl />
+
+                            <Polyline
+                                    strokeColor='green'
+                                    path={this.state.line}
+                            />
+                          </Map>
+
+
+                        </div>
+                );
+            }
+        });
+
+      ReactDOM.render(
+        <Hello />,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
