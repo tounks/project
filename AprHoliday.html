@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+    <title>假日宝 - 全新上线，限时加息2%，周末专享！</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font: 12px/1.5 "Microsoft Yahei", arial, tahoma, "Hiragino Sans GB";
+            color: #323232;
+            background: rgb(124,244,255);
+        }
+        body {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 1rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        input {
+            outline: none;
+            border: none;
+        }
+
+        [v-cloak] {
+            display:none;
+        }
+
+        @media only screen and (max-width: 359px) {
+            html {
+                font-size: 12px;
+            }
+        }
+        @media only screen and (min-width: 360px) and (max-width: 374px) {
+            html {
+                font-size: 13.5px;
+            }
+        }
+        @media only screen and (min-width: 375px) and (max-width: 399px) {
+            html {
+                font-size: 14.0625px;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 479px) {
+            html {
+                font-size: 15px;
+            }
+        }
+        @media only screen and (min-width: 480px) and (max-width: 539px) {
+            html {
+                font-size: 18px;
+            }
+        }
+        @media only screen and (min-width: 540px) and (max-width: 639px) {
+            html {
+                font-size: 20.25px;
+            }
+        }
+        @media only screen and (min-width: 640px) and (max-width: 719px) {
+            html {
+                font-size: 24px;
+            }
+        }
+        @media only screen and (min-width: 720px) {
+            html {
+                font-size: 27px;
+            }
+        }
+        .body-hidden{
+            overflow: hidden;
+        }
+        .common-head {
+            height: 3.40741rem;
+            background: #FFFFFF;
+            color: #333333;
+            width: 100%;
+            max-width: 750px;
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .common-head i{
+            z-index: 5;
+            width: 0.7rem;
+            height: 1.17rem;
+            display: block;
+            position: absolute;
+            background-image: url(../../../register/images/icon_left.png);
+            background-size: cover;
+            top: 50%;
+            left: 2rem;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+        }
+        .common-head span{
+            text-align: center;
+            font-size: 1.28rem;
+            line-height: 3.40741rem;
+            position: absolute;
+            width: 100%;
+        }
+        .holiday{
+            position: relative;
+        }
+        .holiday .content{
+            position: absolute;
+            width: 100%;
+            top: 51%;
+            left: 0;
+            height: 15rem;
+        }
+        .holiday .show_rule{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            z-index: 200;
+            width: 100%;
+        }
+        .holiday .rules{
+            width: 70%;
+            background: #fff;
+            color: #000;
+            text-align: left;
+            padding: 1rem;
+            line-height: 1.5rem;
+            border-radius: 1rem;
+            margin: 0 auto;
+        }
+        .holiday .close_rule{
+            margin-top: 1rem;
+            background: url(../../../images/newPageImg2.0/person_close.png) center bottom no-repeat;
+            background-size: 2.5rem;
+            width: 100%;
+            height: 3rem;
+        }
+        .holiday .rule_btn{
+            position: absolute;
+            top: 37%;
+            left: 65%;
+            display: block;
+            width: 6rem;
+            height: 3rem;
+            z-index: 100;
+        }
+        .holiday  .content .content_bg{
+            position: absolute;
+            top: -1%;
+            width: 86%;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            z-index: 90;
+        }
+        .holiday .content .tip{
+            text-align: center;
+            font-size: 0.95rem;
+            color: #3ba1aa;
+            margin-top: 6%;
+        }
+        .holiday .content video{
+            width: 82%;
+            display: block;
+            margin: 0 auto;
+        }
+        .holiday .content .bg{
+            position: absolute;
+            top: -105%;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            width: 91%;
+            z-index: 100;
+        }
+        .holiday img{
+            width: 100%;
+            display: block;
+        }
+        .play_bg{
+            position: absolute;
+            z-index: 150;
+            width: 100%;
+            height: 10rem;
+            top: 65%;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+        }
+        .play_bg img{
+            width: 16%;
+        }
+        .click_btn{
+            position: absolute;
+            width: 100%;
+            bottom: 3.5%;
+        }
+        .click_btn img{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .click_btn .btn_tip{
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            font-size: 1.2rem;
+            color: #878787;
+            font-weight: bold;
+        }
+        .tips-wapper{
+            position: fixed;
+            overflow: auto;
+            z-index: 9;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 180;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app" v-cloak  >
+    <div>
+        <div class="common-head" v-show="isWap" >
+            <i @click="back()"></i>
+            <span>{{title}}</span>
+        </div>
+        <div class="holiday">
+            <img src="../../../images/activity/2018Activity/Apr/holiday/holiday_1.png" />
+            <div class="content">
+                <div style="position: relative;height: 82%;">
+                    <!--首页背景-->
+                    <img src="../../../images/activity/2018Activity/Apr/holiday/play_bg.png"  class="content_bg" v-show="!firstClick"/>
+                    <!--视频按钮-->
+                    <video id="video1" webkit-playsinline playsinline>
+                        <source src="../../../images/activity/2018Activity/Apr/holiday/holiday.mp4" type="video/mp4" />
+                    </video>
+                    <img src="../../../images/activity/2018Activity/Apr/holiday/holiday_bg.png"  class="bg"/>
+                </div>
+                <p class="tip">高收益[2%加息] · 短周期[13天期限] · 循环购[到期复购]</p>
+            </div>
+
+
+            <!--活动规则-->
+            <span class="rule_btn" @click="showTip=!showTip"></span>
+            <div class="show_rule" v-show="!showTip">
+                <div class="rules">
+                    <p>1、活动时间：每逢周末（周六和周日）；</p>
+                    <p>2、活动期间，每天上午十点和下午三点，平台准点发布【假日宝】福利标：13天期限，8%+2%年利率；数额有限、先到先得；</p>
+                    <p>3、用户可直接在PC、App、H5的理财列表中选择投资</p>
+                    <p>4、本活动最终解释权归杭州承钰资产管理有限公司所有。如有任何疑问，请咨询聪明钱客服400-1818-880。</p>
+                </div>
+                <div class="close_rule" @click="showTip=!showTip"></div>
+            </div>
+            <div class="tips-wapper" v-show="!showTip" @click="showTip=!showTip"></div>
+
+            <!--暂停播放按钮-->
+            <div class="play_bg" @click="pause()" >
+                <img src="../../../images/activity/2018Activity/Apr/holiday/play.png" v-show="!play"/>
+            </div>
+
+            <!--购买按钮-->
+            <div class="click_btn" v-show="isBuy==2" @click="immInvest">
+                <img src="../../../images/activity/2018Activity/Apr/holiday/btn_buy.png"/>
+            </div>
+            <div class="click_btn" v-show="isBuy==1">
+                <div style="position: relative">
+                   <img src="../../../images/activity/2018Activity/Apr/holiday/bty_time.png"/>
+                   <span class="btn_tip">{{buyTip}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../../register/js/vue.min.js" ></script>
+<script type="text/javascript" src="../../../register/js/jweixin-1.0.0.js" ></script>
+<script type="text/javascript" src="../../../register/js/jquery-1.9.1.js" ></script>
+
+<script>
+
+    Vue.filter('overFlow', function(value) {
+        return value.substring(0,14) +"...";
+    })
+
+
+    var example2 = new Vue({
+        el: '#app',
+        data: {
+            hsLogin: false,
+            title: '假日宝',
+            isWap : false,
+            uid: '', //用户uid
+            token:'', //用户token
+            showTip: true,
+            validError: false,
+            validErrorInfo:'',
+            play:false,
+            firstClick:false,
+            isBuy: 1, //状态1表示继续等待，2表示立即投资
+            buyTip: "",
+        },
+        mounted:function(){
+            document.title = '假日宝 - 全新上线，限时加息2%，周末专享！';
+            var currUrl = window.location.href;
+            var user = localStorage.getItem("ngStorage-user");
+            if(this.getQueryString('wap') != null && this.getQueryString('wap')!=''){ //h5有wap字段
+                this.isWap = true;
+                if(user == '{}' || JSON.parse(user) == null){
+                    this.hsLogin = false;
+                }else {
+                    user = JSON.parse(user); //转为json串
+                    this.uid = user.member.uid;
+                    this.token = user.token;
+                    this.hsLogin = true;
+                }
+            }else { //app没有wap,直接传uid过来
+                var uid = this.getQueryString('uid');
+                if(uid == null || uid ==""){
+                    this.hsLogin = false;
+                    //alert( this.uid+ "****"+this.token)
+                }else{
+                    this.uid = uid;
+                    this.token = this.getQueryString('token');
+                    //alert( this.uid+ "****"+this.token)
+                    this.hsLogin = true;
+                }
+            }
+
+            this.getHolidyTime();
+
+            //页面配置
+            $.ajax({
+                url: '/product/signWeChat.dos',
+                type: 'post',
+                data: { url: currUrl, version: '2.0.0', channel: '3' },
+                success: function (data) {
+                    if (data.success) {
+                        wx.config({
+                            debug: false,
+                            appId: data.map.appid,
+                            timestamp: data.map.timestamp,
+                            nonceStr: data.map.noncestr,
+                            signature: data.map.sign,
+                            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+                        });
+                        wx.ready(function () {
+                            wx.onMenuShareTimeline({
+                                desc:  '假日宝',
+                                title:  '假日宝 - 全新上线，限时加息2%，周末专享！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/AprHoliday.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/holiday/hday_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareAppMessage({
+                                title:  '假日宝',
+                                desc:  '假日宝 - 全新上线，限时加息2%，周末专享！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/AprHoliday.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/holiday/hday_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareQQ({
+                                title:  '假日宝',
+                                desc:  '假日宝 - 全新上线，限时加息2%，周末专享！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/AprHoliday.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/holiday/hday_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareWeibo({
+                                title:  '假日宝',
+                                desc:  '假日宝 - 全新上线，限时加息2%，周末专享！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/AprHoliday.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/holiday/hday_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                            wx.onMenuShareQZone({
+                                title:  '假日宝',
+                                desc:  '假日宝 - 全新上线，限时加息2%，周末专享！',
+                                link: 'https://m.congmingmoney.com/template/activity/2018Activity/AprHoliday.html?wap=true', // 分享链接
+                                imgUrl: 'https://m.congmingmoney.com/images/activity/holiday/hday_1.png', // 分享图标
+                                success: function () {
+                                    alert('分享成功！');
+                                },
+                                cancel: function () {
+                                    alert('您取消了分享！');
+                                }
+                            });
+                        })
+
+                    };
+                }
+            });
+        },
+        methods: {
+            //立即返回
+            back:function () {
+                window.location.href = "/main/home";
+            },
+            //获取链接上的参数
+            getQueryString : function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            },
+            //播放
+            pause:function () {
+                this.firstClick = true;
+                var myVideo = document.getElementById("video1");
+                var vm = this;
+                myVideo.addEventListener("ended",function(){
+                    vm.firstClick = false;
+                    vm.play = false;
+                })
+                if (myVideo.paused){
+                    this.play = true;
+                    myVideo.play();
+                }
+                else{
+                    this.play = false;
+                    myVideo.pause();
+                }
+            },
+            //立即投资
+            immInvest:function () {
+                if(this.getQueryString('wap')!= null && this.getQueryString('wap')!=''){
+                    window.location.href = "/main/bankBillList";
+                }else {
+                    window.location.href = "jsmp://page=2?";
+                }
+            },
+            //时间转换
+            timeTrans:function (msd) {
+                var time = parseFloat(msd) /1000;
+                var qwer = Math.floor(time/60/60);
+                var  minutes = Math.floor(time/60%60);
+                var  seconds = Math.floor(time%60);
+                time =  qwer  + "时" + minutes +"分"+  seconds +"秒";
+                return time;
+            },
+            //获取假日宝时间
+            getHolidyTime:function(){
+                var that = this;
+                var nowTime = new Date().getTime()
+                // var nowTime1 = new Date(2017Activity,9,24).getTime()
+                var nowYear = new Date().getFullYear()
+                var nowMonth = new Date().getMonth()
+                var nowDate = new Date().getDate()
+                var nowWeek = new Date().getDay()
+                switch(nowWeek){
+                    case 0:
+                        this.isBuy = 2
+                        var beginTime = new Date(nowYear,nowMonth,nowDate,23,59,59).getTime();
+                        if(nowTime < beginTime){ //数据先处理，隔1秒中后再处理
+                            that.isBuy = 2
+                        }else{
+                            that.isBuy = 1
+                            that.buyTip = '距离活动开始还有5天'
+                        }
+                        setInterval(function () {
+                            nowTime += 1000
+                            if(nowTime < beginTime){
+                                that.isBuy = 2
+                            }else{
+                                that.isBuy = 1
+                                that.buyTip = '距离活动开始还有5天'
+                            }
+                        },1000)
+                        break;
+                    case 1:
+                        this.isBuy = 1
+                        this.buyTip = '距离活动开始还有5天'
+                        break;
+                    case 2:
+                        this.isBuy = 1
+                        this.buyTip = '距离活动开始还有4天'
+                        break;
+                    case 3:
+                        this.isBuy = 1
+                        this.buyTip = '距离活动开始还有3天'
+                        break;
+                    case 4:
+                        this.isBuy = 1
+                        this.buyTip = '距离活动开始还有2天'
+                        break;
+                    case 5:
+                        this.isBuy = 1;
+                        var beginTime = new Date(nowYear,nowMonth,nowDate,10,00,00).getTime();
+                        var truebTime = beginTime + 86400000;
+                        if(nowTime < beginTime ){ //立马先处理一遍
+                            that.buyTip = '距离活动开始还有1天'
+                        }else{
+                            that.buyTip = that.timeTrans(truebTime-nowTime)
+                        }
+
+                        setInterval(function () {
+                            nowTime += 1000
+                            if(nowTime < beginTime ){
+                                that.buyTip = '距离活动开始还有1天'
+                            }else{
+                                that.buyTip = that.timeTrans(truebTime-nowTime)
+                            }
+                        },1000)
+                        break;
+                    case 6:
+                        var beginTime = new Date(nowYear,nowMonth,nowDate,10,00,00).getTime();
+                        if(nowTime > beginTime){
+                            that.isBuy = 2
+                        }else{
+                            that.buyTip = that.timeTrans(beginTime-nowTime)
+                        }
+                        setInterval(function () {
+                            nowTime += 1000
+                            if(nowTime > beginTime){
+                                that.isBuy = 2
+                            }else{
+                                that.buyTip = that.timeTrans(beginTime-nowTime)
+                            }
+                        },1000)
+                        break;
+                };
+            }
+
+        },
+    })
+</script>
+</html>
