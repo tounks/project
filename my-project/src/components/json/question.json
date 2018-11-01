@@ -1,0 +1,400 @@
+{
+    "map": {
+        "questionnaire": [
+            {
+                "question": "您的年龄在以下哪个范围内？",
+                "options": [
+                    {
+                        "content": "29岁以下",
+                        "id": 1,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 1
+                    },
+                    {
+                        "content": "30-39岁",
+                        "id": 2,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 1
+                    },
+                    {
+                        "content": "40-49岁",
+                        "id": 3,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 1
+                    },
+                    {
+                        "content": "50-59岁",
+                        "id": 4,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 1
+                    },
+                    {
+                        "content": "60岁以上",
+                        "id": 5,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 1
+                    }
+                ]
+            },
+            {
+                "question": "您有过几年的投资经验？",
+                "options": [
+                    {
+                        "content": "10年以上",
+                        "id": 6,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 2
+                    },
+                    {
+                        "content": "6-10年",
+                        "id": 7,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 2
+                    },
+                    {
+                        "content": "3-5年",
+                        "id": 8,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 2
+                    },
+                    {
+                        "content": "1-2年",
+                        "id": 9,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 2
+                    },
+                    {
+                        "content": "1年以下",
+                        "id": 10,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 2
+                    }
+                ]
+            },
+            {
+                "question": "您是否有过投资经验？",
+                "options": [
+                    {
+                        "content": "有投资贵金属、外汇、期货、期权等高风险衍生品经验",
+                        "id": 11,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 3
+                    },
+                    {
+                        "content": "有投资股票、股票型基金的经验",
+                        "id": 12,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 3
+                    },
+                    {
+                        "content": "有购买过银行的理财产品、债券基金、分红型、投连险",
+                        "id": 13,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 3
+                    },
+                    {
+                        "content": "有购买过保本基金、货币基金（如余额宝）、信托等低风险产品",
+                        "id": 14,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 3
+                    },
+                    {
+                        "content": "从未有过投资经历，只存银行的定期或活期",
+                        "id": 15,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 3
+                    }
+                ]
+            },
+            {
+                "question": "您的家庭目前全年收入状况如何？",
+                "options": [
+                    {
+                        "content": "50万元以上",
+                        "id": 16,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 4
+                    },
+                    {
+                        "content": "30-50万元",
+                        "id": 17,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 4
+                    },
+                    {
+                        "content": "15-30万元",
+                        "id": 18,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 4
+                    },
+                    {
+                        "content": "5-15万元",
+                        "id": 19,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 4
+                    },
+                    {
+                        "content": "5万元以下",
+                        "id": 20,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 4
+                    }
+                ]
+            },
+            {
+                "question": "您投资的主要目的是什么？选择最符合您的一个描述：",
+                "options": [
+                    {
+                        "content": "关心长期的高回报，能够接受短期的资产价值波动。",
+                        "id": 21,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 5
+                    },
+                    {
+                        "content": "倾向长期的成长，较少关心短期的回报以及波动。",
+                        "id": 22,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 5
+                    },
+                    {
+                        "content": "希望投资能获得一定的增值，同时获得波动适度的年回报。",
+                        "id": 23,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 5
+                    },
+                    {
+                        "content": "只想确保资产的安全性，同时希望能够得到固定的收益。",
+                        "id": 24,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 5
+                    },
+                    {
+                        "content": "希望利用投资以及投资所获得的收益在短期内用于大额的购买计划。",
+                        "id": 25,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 5
+                    }
+                ]
+            },
+            {
+                "question": "当您进行投资时（例如基金、股票），您能接受一年内损失多少？",
+                "options": [
+                    {
+                        "content": "我能承受25％以上亏损",
+                        "id": 26,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 6
+                    },
+                    {
+                        "content": "我能承受10-20％的亏损",
+                        "id": 27,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 6
+                    },
+                    {
+                        "content": "我最多只能承受5-10%的亏损",
+                        "id": 28,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 6
+                    },
+                    {
+                        "content": "我最多只能承受5%以下的亏损",
+                        "id": 29,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 6
+                    }
+                ]
+            },
+            {
+                "question": "目前您的投资主要是哪一品种？",
+                "options": [
+                    {
+                        "content": "外汇、期货、现货贵金属 等超高风险资产",
+                        "id": 30,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 7
+                    },
+                    {
+                        "content": "股票、股票基金、私募股权基金 等高风险资产",
+                        "id": 31,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 7
+                    },
+                    {
+                        "content": "混合基金、指数基金、结构类产品 等较高风险资产",
+                        "id": 32,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 7
+                    },
+                    {
+                        "content": "银行理财产品、信托、固定收益类基金（有限合伙基金）、货币基金（如余额宝）",
+                        "id": 33,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 7
+                    },
+                    {
+                        "content": "活期、定期存款、国债、保险E. 我几乎不能承受任何亏损",
+                        "id": 34,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 7
+                    }
+                ]
+            },
+            {
+                "question": "如果您拥有50万用来建立资产组合，您会选择下面哪一个组合？",
+                "options": [
+                    {
+                        "content": "低风险投资、一般风险投资、高风险投资的比重分别为 5  ：15 ：80",
+                        "id": 35,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 8
+                    },
+                    {
+                        "content": "低风险投资、一般风险投资、高风险投资的比重分别为 10 ：30 ：60",
+                        "id": 36,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 8
+                    },
+                    {
+                        "content": "低风险投资、一般风险投资、高风险投资的比重分别为 30 ：40 ：30",
+                        "id": 37,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 8
+                    },
+                    {
+                        "content": "低风险投资、一般风险投资、高风险投资的比重分别为 60 ：30 ：10",
+                        "id": 38,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 8
+                    },
+                    {
+                        "content": "低风险投资、一般风险投资、高风险投资的比重分别为 80 ：15 ：5",
+                        "id": 39,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 8
+                    }
+                ]
+            },
+            {
+                "question": "长期风险承受水平：下面哪一种描述最符合您可接受的价值波动程度？",
+                "options": [
+                    {
+                        "content": "希望赚取最高回报潜力，能接受3年以上的负面波动，包括损失本金",
+                        "id": 40,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 9
+                    },
+                    {
+                        "content": "希望赚取较高回报潜力，能接受3年以上的负面波动",
+                        "id": 41,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 9
+                    },
+                    {
+                        "content": "寻求资金较高收益，可接受3年内负面波动，使回报显著高于定期存款",
+                        "id": 42,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 9
+                    },
+                    {
+                        "content": "保守投资，但愿意在2年内接受少许负面波动，使回报高于定期存款",
+                        "id": 43,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 9
+                    },
+                    {
+                        "content": "不希望投资本金承担风险。我愿意接受的回报大约与定期存款一样",
+                        "id": 44,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 9
+                    }
+                ]
+            },
+            {
+                "question": "假设现有以下几个投资品种，那您会选择哪一个？",
+                "options": [
+                    {
+                        "content": "收益率在30%以上，同时本金也有可能亏损20%以上",
+                        "id": 45,
+                        "opt": "A",
+                        "score": 10,
+                        "subjectId": 10
+                    },
+                    {
+                        "content": "本金不保证，收益率在20%以内，同时本金也有可能亏损10%以内",
+                        "id": 46,
+                        "opt": "B",
+                        "score": 8,
+                        "subjectId": 10
+                    },
+                    {
+                        "content": "本息保证，收益率在10%左右",
+                        "id": 47,
+                        "opt": "C",
+                        "score": 5,
+                        "subjectId": 10
+                    },
+                    {
+                        "content": "本息保证，收益率在4-6%之间",
+                        "id": 48,
+                        "opt": "D",
+                        "score": 3,
+                        "subjectId": 10
+                    },
+                    {
+                        "content": "银行定期存款，收益率在3%",
+                        "id": 49,
+                        "opt": "E",
+                        "score": 0,
+                        "subjectId": 10
+                    }
+                ]
+            }
+        ]
+    },
+    "success": true
+}

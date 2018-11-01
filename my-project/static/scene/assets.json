@@ -1,0 +1,8 @@
+﻿{
+	"entry" : ["data/scene.xml"],
+	"mode" : "1",
+	"title" : "dodo鸟",
+	"share" : "share.jpg",
+	"preview" : "share.jpg",
+	"desc" : "dodo鸟"
+}

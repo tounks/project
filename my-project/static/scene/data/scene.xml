@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Assets>
+  <Asset>
+    <Material name="congmingqian_s" alpha="1" isSkin="true" type="surface" colorMap="dise1.jpg" depth_check="true" depth_write="true" />
+    <Material name="lambert14" alpha="1" shininess="50" ambient="0 0 0 1" diffuse="0.4 0.4 0.4 1" color="1.0 1.0 1.0 1.0" type="lambert" depth_check="true" depth_write="true" />
+    <Material name="yanjing_s" uv_ani="true" alpha="1" type="surface" colorMap="yanjing1.png" depth_check="true" depth_write="true" />
+    <Material name="zuiba_s" uv_ani="true" alpha="1" type="surface" colorMap="zuiba1.png" depth_check="true" depth_write="true" />
+    <!-- 红包 -->
+    <Material name="hongbao_m" alpha="1" shininess="50" ambient="0 0 0 1" diffuse="0.8 0.8 0.8 1" type="surface" colorMap="hongbao.jpg" depth_check="true" depth_write="true" />
+    <!-- 大红包 -->
+    <Material name="lambert16" alpha="1" shininess="50" ambient="0 0 0 1" diffuse="0.8 0.8 0.8 1" type="surface" colorMap="hongbao.jpg" depth_check="true" depth_write="true" />
+
+    <eMesh version="PodMeshV1.0;" src="congmingqianbaoweihe2_src.emesh"/>
+    <!-- 红包 -->
+    <eMesh version="PodMeshV1.0;" src="hongbao_1_src.emesh"/>
+    <!-- 大红包 -->
+    <eMesh version="PodMeshV1.0;" src="hongbaodiao_src.emesh"/>
+
+    <Scene name="scene1" clear_depth="1.0" describle="FromPODScene=1.0">
+      <Camera name="camera1" width="1" height="1" position="0.224812 5.73239 15.3479" lookat="0.210926 5.62786 14.3535" up="-0.00145945 0.994522 -0.104518" fovy="37.8493" auto_screen_size="false"/>
+      <RenderTarget width="1" height="1">
+        <Viewport name="main_viewport" camera="camera1" background_color="0 0 0 0" left="0" top="0" width="1" height="1" />
+      </RenderTarget>
+      <GameObject name="congmingqian">
+        <Transform quaternion="1 -0 -0 -0"/>
+        <Transform scale="1 1 1"/>
+        <Transform position="0 0 0"/>
+        <GameObject name="congmingqian_youshou" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <MeshFilter mesh="congmingqian_youshou" skeleton="congmingqian_youshou__skeleton" />
+          <Renderer material="congmingqian_s"/>
+        </GameObject>
+        <GameObject name="congmingqian_yanjing" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <MeshFilter mesh="congmingqian_yanjing" skeleton="congmingqian_yanjing__skeleton" />
+          <Renderer material="congmingqian_s"/>
+        </GameObject>
+        <GameObject name="congmingqian_zuoshou" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <MeshFilter mesh="congmingqian_zuoshou" skeleton="congmingqian_zuoshou__skeleton" />
+          <Renderer material="congmingqian_s"/>
+        </GameObject>
+        <GameObject name="congmingqian_lianbu" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <MeshFilter mesh="congmingqian_lianbu" skeleton="congmingqian_lianbu__skeleton" />
+          <Renderer material="congmingqian_s"/>
+        </GameObject>
+        <GameObject name="congmingqian_shenti" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <MeshFilter mesh="congmingqian_shenti" skeleton="congmingqian_shenti__skeleton" />
+          <Renderer material="congmingqian_s"/>
+        </GameObject>
+        <GameObject name="congmingqian_maozi" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <MeshFilter mesh="congmingqian_maozi" skeleton="congmingqian_maozi__skeleton" />
+          <Renderer material="congmingqian_s"/>
+        </GameObject>
+      </GameObject>
+      <GameObject name="Group">
+        <Transform quaternion="1 -0 -0 -0"/>
+        <Transform scale="1 1 1"/>
+        <Transform position="0 0 0"/>
+        <GameObject name="Main">
+          <Transform quaternion="1 -0 -0 -0"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="0 0 0"/>
+          <GameObject name="DeformationSystem">
+            <Transform quaternion="1 -0 -0 -0"/>
+            <Transform scale="1 1 1"/>
+            <Transform position="0 0 0"/>
+            <Bone index="21" skeleton="congmingqian_shenti__skeleton" name="Root_M">
+              <Transform quaternion="-0.471023 -0.527387 -0.471023 -0.527387"/>
+              <Transform scale="1 1 1"/>
+              <Transform position="1.97095e-016 1.56053 -0.0024234"/>
+              <Bone index="22" skeleton="congmingqian_shenti__skeleton" name="Hip_R">
+                <Transform quaternion="0.000712673 -0.0913267 -0.993718 -0.0646859"/>
+                <Transform scale="1 1 1"/>
+                <Transform position="-0.143927 -0.0898756 -0.579409"/>
+                <Bone index="23" skeleton="congmingqian_shenti__skeleton" name="Knee_R">
+                  <Transform quaternion="0.997105 0 0 -0.076038"/>
+                  <Transform scale="1 1 1"/>
+                  <Transform position="0.382938 -3.33067e-016 1.44329e-015"/>
+                  <GameObject name="box_zuojiao1" renderQueueGroupId= "1">
+                    <Transform quaternion="0.510218 -0.486292 0.446093 0.551542"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="0.414652 0.320558 0.134024"/>
+                    <MeshFilter mesh="box_zuojiao1" />
+                    <!-- <Renderer material="lambert14"/> -->
+                  </GameObject>
+                  <Bone index="24" skeleton="congmingqian_shenti__skeleton" name="Ankle_R">
+                    <Transform quaternion="0.998043 0.0474244 -0.00014259 0.0407652"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="0.448267 9.4369e-016 -8.88178e-016"/>
+                    <Bone index="25" skeleton="congmingqian_shenti__skeleton" name="Toes_R">
+                      <Transform quaternion="0.831092 0.0143838 -0.00962042 0.555866"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="0.208253 0.469741 2.10942e-015"/>
+                      <GameObject name="ToesEnd_R">
+                        <Transform quaternion="1 -0 -0 -0"/>
+                        <Transform scale="1 1 1"/>
+                        <Transform position="0.826391 -1.13293e-011 -9.99201e-016"/>
+                      </GameObject>
+                    </Bone>
+                  </Bone>
+                </Bone>
+              </Bone>
+              <Bone index="27" skeleton="congmingqian_shenti__skeleton" name="Spine1_M">
+                <Transform quaternion="0.985133 0 0 -0.171794"/>
+                <Transform scale="1 1 1"/>
+                <Transform position="0.61781 1.11022e-016 -7.23139e-016"/>
+                <Bone index="28" skeleton="congmingqian_shenti__skeleton" name="Chest_M">
+                  <Transform quaternion="0.994318 -0 -0 0.10645"/>
+                  <Transform scale="1 1 1"/>
+                  <Transform position="0.637341 -5.55112e-016 -6.79417e-016"/>
+                  <GameObject name="box_shenti" renderQueueGroupId= "1">
+                    <Transform quaternion="0.504779 -0.495175 -0.504779 -0.495175"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="-0.342222 0.0731886 1.09054e-015"/>
+                    <MeshFilter mesh="box_shenti" />
+                    <!-- <Renderer material="lambert14"/> -->
+                  </GameObject>
+                  <Bone index="29" skeleton="congmingqian_shenti__skeleton" name="Scapula_R">
+                    <Transform quaternion="0.548589 0.00291196 0.835917 0.016891"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="0.653238 -0.0870379 -0.488677"/>
+                    <Bone index="30" skeleton="congmingqian_shenti__skeleton" name="Shoulder_R">
+                      <Transform quaternion="0.979088 -0.00332351 -0.202777 -0.0160472"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="0.479679 -4.996e-016 -1.19904e-014"/>
+                      <GameObject name="box_youshou" renderQueueGroupId= "1">
+                        <Transform quaternion="-0.000619028 -0.000344541 -0.704451 -0.709752"/>
+                        <Transform scale="1 1 1"/>
+                        <Transform position="1.39409 0.0183348 0.00438148"/>
+                        <MeshFilter mesh="box_youshou" />
+                        <!-- <Renderer material="lambert14"/> -->
+                      </GameObject>
+                      <Bone index="31" skeleton="congmingqian_shenti__skeleton" name="Elbow_R">
+                        <Transform quaternion="0.999995 -0 -0 0.00330575"/>
+                        <Transform scale="1 1 1"/>
+                        <Transform position="0.571787 -4.14668e-014 1.90958e-014"/>
+                        <Bone index="32" skeleton="congmingqian_youshou__skeleton" name="Wrist_R">
+                          <Transform quaternion="0.00304276 -0.974685 -0.223535 -0.00359763"/>
+                          <Transform scale="1 1 1"/>
+                          <Transform position="0.585908 1.19349e-015 -1.37668e-014"/>
+                          <GameObject name="Cup_R">
+                            <Transform quaternion="1 -0 -0 -0"/>
+                            <Transform scale="1 1 1"/>
+                            <Transform position="0.227219 2.22045e-016 -1.33227e-015"/>
+                          </GameObject>
+                        </Bone>
+                      </Bone>
+                    </Bone>
+                  </Bone>
+                  <Bone index="34" skeleton="congmingqian_yanjing__skeleton" name="Neck_M">
+                    <Transform quaternion="0.999901 -0 -0 0.0140449"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="0.913677 4.71845e-016 4.5891e-015"/>
+                    <GameObject name="congmingqian_zuoyan" renderQueueGroupId= "2">
+                      <Transform quaternion="0.497775 -0.502216 -0.497775 -0.502216"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="1.40411 1.6666 0.751752"/>
+                      <MeshFilter mesh="congmingqian_zuoyan" />
+                      <Renderer material="yanjing_s"/>
+                    </GameObject>
+                    <GameObject name="congmingqian_youyan" renderQueueGroupId= "2">
+                      <Transform quaternion="0.497775 -0.502216 -0.497775 -0.502216"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="1.40411 1.6666 -0.751752"/>
+                      <MeshFilter mesh="congmingqian_youyan" />
+                      <Renderer material="yanjing_s"/>
+                    </GameObject>
+                    <GameObject name="congmingqian_zuiba" renderQueueGroupId= "2">
+                      <Transform quaternion="0.497775 -0.502216 -0.497775 -0.502216"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="0.453934 1.66749 0.000988"/>
+                      <MeshFilter mesh="congmingqian_zuiba" />
+                      <Renderer material="zuiba_s"/>
+                    </GameObject>
+                    <GameObject name="box_lianbu" renderQueueGroupId= "1">
+                      <Transform quaternion="0.497775 -0.502216 -0.497775 -0.502216"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="1.10647 0.988319 -3.66429e-015"/>
+                      <MeshFilter mesh="box_lianbu" />
+                      <!-- <Renderer material="lambert14"/> -->
+                    </GameObject>
+                    <GameObject name="box_toubu" renderQueueGroupId= "1">
+                      <Transform quaternion="0.497775 -0.502216 -0.497775 -0.502216"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="3.60569 -0.290663 -4.18055e-015"/>
+                      <MeshFilter mesh="box_toubu" />
+                      <!-- <Renderer material="lambert14"/> -->
+                    </GameObject>
+                    <GameObject name="Head_M">
+                      <Transform quaternion="0.9998 0 0 -0.0199965"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="1.07699 -9.15934e-016 -1.99547e-016"/>
+                      <GameObject name="HeadEnd_M">
+                        <Transform quaternion="1 -0 -0 -0"/>
+                        <Transform scale="1 1 1"/>
+                        <Transform position="3.26289 -8.46545e-016 -2.40766e-016"/>
+                      </GameObject>
+                    </GameObject>
+                  </Bone>
+                  <Bone index="37" skeleton="congmingqian_shenti__skeleton" name="Scapula_L">
+                    <Transform quaternion="-0.016891 -0.835917 0.00291196 0.548589"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="0.653238 -0.0870379 0.488677"/>
+                    <Bone index="38" skeleton="congmingqian_shenti__skeleton" name="Shoulder_L">
+                      <Transform quaternion="0.979088 -0.00332351 -0.202777 -0.0160472"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="-0.479679 4.16334e-016 1.11022e-014"/>
+                      <Bone index="39" skeleton="congmingqian_shenti__skeleton" name="Elbow_L">
+                        <Transform quaternion="0.999995 -0 -0 0.00330575"/>
+                        <Transform scale="1 1 1"/>
+                        <Transform position="-0.571787 4.11893e-014 -1.77636e-014"/>
+                        <GameObject name="box_zuoshou" renderQueueGroupId= "1">
+                          <Transform quaternion="0.00267328 -0.00296529 -0.709746 0.704446"/>
+                          <Transform scale="1 1 1"/>
+                          <Transform position="-0.822404 -0.0128978 -0.00438148"/>
+                          <MeshFilter mesh="box_zuoshou" />
+                          <!-- <Renderer material="lambert14"/> -->
+                        </GameObject>
+                        <Bone index="40" skeleton="congmingqian_zuoshou__skeleton" name="Wrist_L">
+                          <Transform quaternion="0.00304276 -0.974685 -0.223535 -0.00359763"/>
+                          <Transform scale="1 1 1"/>
+                          <Transform position="-0.585908 -1.02696e-015 1.55431e-014"/>
+                          <GameObject name="Cup_L">
+                            <Transform quaternion="1 -0 -0 -0"/>
+                            <Transform scale="1 1 1"/>
+                            <Transform position="-0.227219 1.55431e-015 1.33227e-014"/>
+                          </GameObject>
+                        </Bone>
+                      </Bone>
+                    </Bone>
+                  </Bone>
+                </Bone>
+              </Bone>
+              <Bone index="42" skeleton="congmingqian_shenti__skeleton" name="Hip_L">
+                <Transform quaternion="-0.0646859 -0.993718 0.0913267 -0.000712673"/>
+                <Transform scale="1 1 1"/>
+                <Transform position="-0.143927 -0.0898756 0.579409"/>
+                <Bone index="43" skeleton="congmingqian_shenti__skeleton" name="Knee_L">
+                  <Transform quaternion="0.997105 0 0 -0.076038"/>
+                  <Transform scale="1 1 1"/>
+                  <Transform position="-0.382938 5.55112e-016 -1.77636e-015"/>
+                  <GameObject name="box_zuojiao" renderQueueGroupId= "1">
+                    <Transform quaternion="-0.486292 -0.510218 -0.551542 0.446093"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="-0.414652 -0.320558 -0.134024"/>
+                    <MeshFilter mesh="box_zuojiao" />
+                    <!-- <Renderer material="lambert14"/> -->
+                  </GameObject>
+                  <Bone index="44" skeleton="congmingqian_shenti__skeleton" name="Ankle_L">
+                    <Transform quaternion="0.998043 0.0474244 -0.00014259 0.0407652"/>
+                    <Transform scale="1 1 1"/>
+                    <Transform position="-0.448267 -1.02696e-015 1.11022e-015"/>
+                    <Bone index="45" skeleton="congmingqian_shenti__skeleton" name="Toes_L">
+                      <Transform quaternion="0.831092 0.0143838 -0.00962042 0.555866"/>
+                      <Transform scale="1 1 1"/>
+                      <Transform position="-0.208253 -0.469741 -1.66533e-015"/>
+                      <GameObject name="ToesEnd_L">
+                        <Transform quaternion="1 -0 -0 -0"/>
+                        <Transform scale="1 1 1"/>
+                        <Transform position="-0.826391 -1.32877e-012 2.55351e-015"/>
+                      </GameObject>
+                    </Bone>
+                  </Bone>
+                </Bone>
+              </Bone>
+            </Bone>
+          </GameObject>
+        </GameObject>
+
+        <!-- 红包 -->
+        <GameObject name="hongbao" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 0"/>
+          <Transform scale="0.001 0.001 0.001"/>
+          <Transform position="0.028465 2.21992 2.26198"/>
+          <MeshFilter mesh="hongbao" />
+          <Renderer material="hongbao_m"/>
+        </GameObject>
+        <GameObject name="hongbao1" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 0"/>
+          <Transform scale="0.001 0.001 0.001"/>
+          <Transform position="0.028465 2.21992 2.26198"/>
+          <MeshFilter mesh="hongbao1" />
+          <Renderer material="hongbao_m"/>
+        </GameObject>
+        <GameObject name="hongbao2" renderQueueGroupId= "1">
+          <Transform quaternion="1 -0 -0 0"/>
+          <Transform scale="0.001 0.001 0.001"/>
+          <Transform position="0.028465 2.21992 2.26198"/>
+          <MeshFilter mesh="hongbao1" />
+          <Renderer material="hongbao_m"/>
+        </GameObject>
+        <GameObject name="dahongbao" renderQueueGroupId= "2" visible="false">
+          <Transform quaternion="0.988854 -0 -0 0.14889"/>
+          <Transform scale="1 1 1"/>
+          <Transform position="-1.71418 17.8368 3.50748"/>
+          <MeshFilter mesh="dahongbao" />
+          <Renderer material="lambert16"/>
+        </GameObject>
+      </GameObject>
+
+      <!--<GameObject name="camera1"><Transform quaternion="0.673012 0.739631 -0 -0"/><Transform scale="1 1 1"/><Transform position="0.0559726 2.53803 17.915"/></GameObject> 
+-->
+      <!-- 待机动画 -->
+      <KeyFrames src="daijidonghua_src.fks"/>
+      <AnimationSet name="daijidonghua_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuoyan" numFrames="50" name="_kfScaledaijidonghuacongmingqian_zuoyan" kfsName="daijidonghuacongmingqian_zuoyan_kfScale" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_youyan" numFrames="50" name="_kfScaledaijidonghuacongmingqian_youyan" kfsName="daijidonghuacongmingqian_youyan_kfScale" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuiba" numFrames="50" name="_kfScaledaijidonghuacongmingqian_zuiba" kfsName="daijidonghuacongmingqian_zuiba_kfScale" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="50" name="_kfTrandaijidonghuaRoot_M" kfsName="daijidonghuaRoot_M_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="50" name="_kfRotdaijidonghuaRoot_M" kfsName="daijidonghuaRoot_M_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="50" name="_kfRotdaijidonghuaHip_R" kfsName="daijidonghuaHip_R_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="50" name="_kfTrandaijidonghuaKnee_R" kfsName="daijidonghuaKnee_R_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="50" name="_kfRotdaijidonghuaKnee_R" kfsName="daijidonghuaKnee_R_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="50" name="_kfTrandaijidonghuaAnkle_R" kfsName="daijidonghuaAnkle_R_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="50" name="_kfRotdaijidonghuaAnkle_R" kfsName="daijidonghuaAnkle_R_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="50" name="_kfTrandaijidonghuaToes_R" kfsName="daijidonghuaToes_R_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="50" name="_kfRotdaijidonghuaToes_R" kfsName="daijidonghuaToes_R_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="50" name="_kfTrandaijidonghuaSpine1_M" kfsName="daijidonghuaSpine1_M_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="50" name="_kfRotdaijidonghuaSpine1_M" kfsName="daijidonghuaSpine1_M_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="50" name="_kfTrandaijidonghuaChest_M" kfsName="daijidonghuaChest_M_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="50" name="_kfRotdaijidonghuaChest_M" kfsName="daijidonghuaChest_M_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="50" name="_kfTrandaijidonghuaShoulder_R" kfsName="daijidonghuaShoulder_R_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="50" name="_kfRotdaijidonghuaShoulder_R" kfsName="daijidonghuaShoulder_R_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="50" name="_kfTrandaijidonghuaElbow_R" kfsName="daijidonghuaElbow_R_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="50" name="_kfRotdaijidonghuaElbow_R" kfsName="daijidonghuaElbow_R_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="50" name="_kfTrandaijidonghuaWrist_R" kfsName="daijidonghuaWrist_R_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="50" name="_kfTrandaijidonghuaNeck_M" kfsName="daijidonghuaNeck_M_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="50" name="_kfRotdaijidonghuaNeck_M" kfsName="daijidonghuaNeck_M_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="50" name="_kfTrandaijidonghuaHead_M" kfsName="daijidonghuaHead_M_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="50" name="_kfTrandaijidonghuaShoulder_L" kfsName="daijidonghuaShoulder_L_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="50" name="_kfRotdaijidonghuaShoulder_L" kfsName="daijidonghuaShoulder_L_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="50" name="_kfTrandaijidonghuaElbow_L" kfsName="daijidonghuaElbow_L_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="50" name="_kfRotdaijidonghuaElbow_L" kfsName="daijidonghuaElbow_L_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="50" name="_kfTrandaijidonghuaWrist_L" kfsName="daijidonghuaWrist_L_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="50" name="_kfRotdaijidonghuaHip_L" kfsName="daijidonghuaHip_L_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="50" name="_kfTrandaijidonghuaKnee_L" kfsName="daijidonghuaKnee_L_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="50" name="_kfRotdaijidonghuaKnee_L" kfsName="daijidonghuaKnee_L_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="50" name="_kfTrandaijidonghuaAnkle_L" kfsName="daijidonghuaAnkle_L_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="50" name="_kfRotdaijidonghuaAnkle_L" kfsName="daijidonghuaAnkle_L_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="50" name="_kfTrandaijidonghuaToes_L" kfsName="daijidonghuaToes_L_kfTran" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="50" name="_kfRotdaijidonghuaToes_L" kfsName="daijidonghuaToes_L_kfRot" duration="2083.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 入场动画 -->
+      <KeyFrames src="ruchang_1_src.fks"/>
+      <AnimationSet name="ruchang_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="ruchang_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.47" 
+            duration="1"
+            startOffset="3000" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="ruchang_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.47" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="4791" 
+            repeatCount="0" 
+            start="true"/>
+
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuoyan" numFrames="120" name="_kfScaleruchang_1congmingqian_zuoyan" kfsName="ruchang_1congmingqian_zuoyan_kfScale" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_youyan" numFrames="120" name="_kfScaleruchang_1congmingqian_youyan" kfsName="ruchang_1congmingqian_youyan_kfScale" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuiba" numFrames="120" name="_kfScaleruchang_1congmingqian_zuiba" kfsName="ruchang_1congmingqian_zuiba_kfScale" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Main" numFrames="120" name="_kfTranruchang_1Main" kfsName="ruchang_1Main_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Main" numFrames="120" name="_kfRotruchang_1Main" kfsName="ruchang_1Main_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="120" name="_kfTranruchang_1Root_M" kfsName="ruchang_1Root_M_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="120" name="_kfRotruchang_1Root_M" kfsName="ruchang_1Root_M_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="120" name="_kfRotruchang_1Hip_R" kfsName="ruchang_1Hip_R_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="120" name="_kfTranruchang_1Knee_R" kfsName="ruchang_1Knee_R_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="120" name="_kfRotruchang_1Knee_R" kfsName="ruchang_1Knee_R_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="120" name="_kfTranruchang_1Ankle_R" kfsName="ruchang_1Ankle_R_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="120" name="_kfRotruchang_1Ankle_R" kfsName="ruchang_1Ankle_R_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="120" name="_kfTranruchang_1Toes_R" kfsName="ruchang_1Toes_R_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="120" name="_kfRotruchang_1Toes_R" kfsName="ruchang_1Toes_R_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="120" name="_kfTranruchang_1Spine1_M" kfsName="ruchang_1Spine1_M_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="120" name="_kfRotruchang_1Spine1_M" kfsName="ruchang_1Spine1_M_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="120" name="_kfTranruchang_1Chest_M" kfsName="ruchang_1Chest_M_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="120" name="_kfRotruchang_1Chest_M" kfsName="ruchang_1Chest_M_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="120" name="_kfTranruchang_1Shoulder_R" kfsName="ruchang_1Shoulder_R_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="120" name="_kfRotruchang_1Shoulder_R" kfsName="ruchang_1Shoulder_R_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="120" name="_kfTranruchang_1Elbow_R" kfsName="ruchang_1Elbow_R_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="120" name="_kfTranruchang_1Wrist_R" kfsName="ruchang_1Wrist_R_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="120" name="_kfTranruchang_1Neck_M" kfsName="ruchang_1Neck_M_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="120" name="_kfRotruchang_1Neck_M" kfsName="ruchang_1Neck_M_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="120" name="_kfTranruchang_1Head_M" kfsName="ruchang_1Head_M_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="120" name="_kfTranruchang_1Shoulder_L" kfsName="ruchang_1Shoulder_L_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="120" name="_kfRotruchang_1Shoulder_L" kfsName="ruchang_1Shoulder_L_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="120" name="_kfTranruchang_1Elbow_L" kfsName="ruchang_1Elbow_L_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="120" name="_kfTranruchang_1Wrist_L" kfsName="ruchang_1Wrist_L_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="120" name="_kfRotruchang_1Hip_L" kfsName="ruchang_1Hip_L_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="120" name="_kfTranruchang_1Knee_L" kfsName="ruchang_1Knee_L_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="120" name="_kfRotruchang_1Knee_L" kfsName="ruchang_1Knee_L_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="120" name="_kfTranruchang_1Ankle_L" kfsName="ruchang_1Ankle_L_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="120" name="_kfRotruchang_1Ankle_L" kfsName="ruchang_1Ankle_L_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="120" name="_kfTranruchang_1Toes_L" kfsName="ruchang_1Toes_L_kfTran" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="120" name="_kfRotruchang_1Toes_L" kfsName="ruchang_1Toes_L_kfRot" duration="5000" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 打招呼 -->
+      <KeyFrames src="dazhaohu_1_src.fks"/>
+      <AnimationSet name="dazhaohu_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="dazhaohu_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.12" 
+            duration="1"
+            startOffset="700" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="dazhaohu_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.12" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="2416" 
+            repeatCount="0" 
+            start="true"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuoyan" numFrames="70" name="_kfScaledazhaohu_1congmingqian_zuoyan" kfsName="dazhaohu_1congmingqian_zuoyan_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_youyan" numFrames="70" name="_kfScaledazhaohu_1congmingqian_youyan" kfsName="dazhaohu_1congmingqian_youyan_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuiba" numFrames="70" name="_kfScaledazhaohu_1congmingqian_zuiba" kfsName="dazhaohu_1congmingqian_zuiba_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="70" name="_kfRotdazhaohu_1Spine1_M" kfsName="dazhaohu_1Spine1_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="70" name="_kfTrandazhaohu_1Chest_M" kfsName="dazhaohu_1Chest_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="70" name="_kfRotdazhaohu_1Chest_M" kfsName="dazhaohu_1Chest_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_R" numFrames="70" name="_kfRotdazhaohu_1Scapula_R" kfsName="dazhaohu_1Scapula_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="70" name="_kfTrandazhaohu_1Shoulder_R" kfsName="dazhaohu_1Shoulder_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="70" name="_kfRotdazhaohu_1Shoulder_R" kfsName="dazhaohu_1Shoulder_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="70" name="_kfTrandazhaohu_1Elbow_R" kfsName="dazhaohu_1Elbow_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="70" name="_kfRotdazhaohu_1Elbow_R" kfsName="dazhaohu_1Elbow_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="70" name="_kfTrandazhaohu_1Wrist_R" kfsName="dazhaohu_1Wrist_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="70" name="_kfRotdazhaohu_1Wrist_R" kfsName="dazhaohu_1Wrist_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="70" name="_kfTrandazhaohu_1Neck_M" kfsName="dazhaohu_1Neck_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="70" name="_kfRotdazhaohu_1Neck_M" kfsName="dazhaohu_1Neck_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="70" name="_kfTrandazhaohu_1Head_M" kfsName="dazhaohu_1Head_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_L" numFrames="70" name="_kfRotdazhaohu_1Scapula_L" kfsName="dazhaohu_1Scapula_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="70" name="_kfTrandazhaohu_1Shoulder_L" kfsName="dazhaohu_1Shoulder_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="70" name="_kfRotdazhaohu_1Shoulder_L" kfsName="dazhaohu_1Shoulder_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="70" name="_kfTrandazhaohu_1Elbow_L" kfsName="dazhaohu_1Elbow_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="70" name="_kfTrandazhaohu_1Wrist_L" kfsName="dazhaohu_1Wrist_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 撒娇 -->
+      <KeyFrames src="shajiao_1_src.fks"/>
+      <AnimationSet name="shajiao_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 眼睛 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="shajiao_yanjing_UV_1" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.17" 
+            duration="1"
+            startOffset="1000" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="shajiao_yanjing_UV_2" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.17" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="3250" 
+            repeatCount="0" 
+            start="true"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="90" name="_kfTranshajiao_1Root_M" kfsName="shajiao_1Root_M_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="90" name="_kfRotshajiao_1Root_M" kfsName="shajiao_1Root_M_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="90" name="_kfRotshajiao_1Hip_R" kfsName="shajiao_1Hip_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="90" name="_kfTranshajiao_1Knee_R" kfsName="shajiao_1Knee_R_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="90" name="_kfRotshajiao_1Knee_R" kfsName="shajiao_1Knee_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="90" name="_kfTranshajiao_1Ankle_R" kfsName="shajiao_1Ankle_R_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="90" name="_kfRotshajiao_1Ankle_R" kfsName="shajiao_1Ankle_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="90" name="_kfTranshajiao_1Toes_R" kfsName="shajiao_1Toes_R_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="90" name="_kfRotshajiao_1Toes_R" kfsName="shajiao_1Toes_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="90" name="_kfTranshajiao_1Spine1_M" kfsName="shajiao_1Spine1_M_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="90" name="_kfRotshajiao_1Spine1_M" kfsName="shajiao_1Spine1_M_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="90" name="_kfTranshajiao_1Chest_M" kfsName="shajiao_1Chest_M_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="90" name="_kfRotshajiao_1Chest_M" kfsName="shajiao_1Chest_M_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_R" numFrames="90" name="_kfRotshajiao_1Scapula_R" kfsName="shajiao_1Scapula_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="90" name="_kfTranshajiao_1Shoulder_R" kfsName="shajiao_1Shoulder_R_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="90" name="_kfRotshajiao_1Shoulder_R" kfsName="shajiao_1Shoulder_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="90" name="_kfTranshajiao_1Elbow_R" kfsName="shajiao_1Elbow_R_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="90" name="_kfRotshajiao_1Elbow_R" kfsName="shajiao_1Elbow_R_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="90" name="_kfTranshajiao_1Wrist_R" kfsName="shajiao_1Wrist_R_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="90" name="_kfTranshajiao_1Neck_M" kfsName="shajiao_1Neck_M_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="90" name="_kfRotshajiao_1Neck_M" kfsName="shajiao_1Neck_M_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="90" name="_kfTranshajiao_1Head_M" kfsName="shajiao_1Head_M_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_L" numFrames="90" name="_kfRotshajiao_1Scapula_L" kfsName="shajiao_1Scapula_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="90" name="_kfTranshajiao_1Shoulder_L" kfsName="shajiao_1Shoulder_L_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="90" name="_kfRotshajiao_1Shoulder_L" kfsName="shajiao_1Shoulder_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="90" name="_kfTranshajiao_1Elbow_L" kfsName="shajiao_1Elbow_L_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="90" name="_kfRotshajiao_1Elbow_L" kfsName="shajiao_1Elbow_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="90" name="_kfTranshajiao_1Wrist_L" kfsName="shajiao_1Wrist_L_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="90" name="_kfRotshajiao_1Hip_L" kfsName="shajiao_1Hip_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="90" name="_kfTranshajiao_1Knee_L" kfsName="shajiao_1Knee_L_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="90" name="_kfRotshajiao_1Knee_L" kfsName="shajiao_1Knee_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="90" name="_kfTranshajiao_1Ankle_L" kfsName="shajiao_1Ankle_L_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="90" name="_kfRotshajiao_1Ankle_L" kfsName="shajiao_1Ankle_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="90" name="_kfTranshajiao_1Toes_L" kfsName="shajiao_1Toes_L_kfTran" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="90" name="_kfRotshajiao_1Toes_L" kfsName="shajiao_1Toes_L_kfRot" duration="3750" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 卖萌 -->
+      <KeyFrames src="maimeng_1_src.fks"/>
+      <AnimationSet name="maimeng_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="maimeng_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.12" 
+            duration="1"
+            startOffset="333" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="maimeng_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.12" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="2166" 
+            repeatCount="0" 
+            start="true"/>
+        <!-- 眼睛 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="maimeng_yanjing_UV_1" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.67" 
+            duration="1"
+            startOffset="333" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="maimeng_yanjing_UV_2" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.67" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="2166" 
+            repeatCount="0" 
+            start="true"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="65" name="_kfTranmaimeng_1Root_M" kfsName="maimeng_1Root_M_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="65" name="_kfRotmaimeng_1Hip_R" kfsName="maimeng_1Hip_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="65" name="_kfTranmaimeng_1Knee_R" kfsName="maimeng_1Knee_R_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="65" name="_kfRotmaimeng_1Knee_R" kfsName="maimeng_1Knee_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="65" name="_kfTranmaimeng_1Ankle_R" kfsName="maimeng_1Ankle_R_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="65" name="_kfRotmaimeng_1Ankle_R" kfsName="maimeng_1Ankle_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="65" name="_kfTranmaimeng_1Toes_R" kfsName="maimeng_1Toes_R_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="65" name="_kfRotmaimeng_1Toes_R" kfsName="maimeng_1Toes_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="65" name="_kfTranmaimeng_1Spine1_M" kfsName="maimeng_1Spine1_M_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="65" name="_kfRotmaimeng_1Spine1_M" kfsName="maimeng_1Spine1_M_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="65" name="_kfTranmaimeng_1Chest_M" kfsName="maimeng_1Chest_M_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="65" name="_kfTranmaimeng_1Shoulder_R" kfsName="maimeng_1Shoulder_R_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="65" name="_kfRotmaimeng_1Shoulder_R" kfsName="maimeng_1Shoulder_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="65" name="_kfTranmaimeng_1Elbow_R" kfsName="maimeng_1Elbow_R_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="65" name="_kfRotmaimeng_1Elbow_R" kfsName="maimeng_1Elbow_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="65" name="_kfTranmaimeng_1Wrist_R" kfsName="maimeng_1Wrist_R_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="65" name="_kfRotmaimeng_1Wrist_R" kfsName="maimeng_1Wrist_R_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="65" name="_kfTranmaimeng_1Neck_M" kfsName="maimeng_1Neck_M_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="65" name="_kfRotmaimeng_1Neck_M" kfsName="maimeng_1Neck_M_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="65" name="_kfTranmaimeng_1Head_M" kfsName="maimeng_1Head_M_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="65" name="_kfTranmaimeng_1Shoulder_L" kfsName="maimeng_1Shoulder_L_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="65" name="_kfRotmaimeng_1Shoulder_L" kfsName="maimeng_1Shoulder_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="65" name="_kfTranmaimeng_1Elbow_L" kfsName="maimeng_1Elbow_L_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="65" name="_kfRotmaimeng_1Elbow_L" kfsName="maimeng_1Elbow_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="65" name="_kfTranmaimeng_1Wrist_L" kfsName="maimeng_1Wrist_L_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="65" name="_kfRotmaimeng_1Wrist_L" kfsName="maimeng_1Wrist_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="65" name="_kfRotmaimeng_1Hip_L" kfsName="maimeng_1Hip_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="65" name="_kfTranmaimeng_1Knee_L" kfsName="maimeng_1Knee_L_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="65" name="_kfRotmaimeng_1Knee_L" kfsName="maimeng_1Knee_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="65" name="_kfTranmaimeng_1Ankle_L" kfsName="maimeng_1Ankle_L_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="65" name="_kfRotmaimeng_1Ankle_L" kfsName="maimeng_1Ankle_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="65" name="_kfTranmaimeng_1Toes_L" kfsName="maimeng_1Toes_L_kfTran" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="65" name="_kfRotmaimeng_1Toes_L" kfsName="maimeng_1Toes_L_kfRot" duration="2708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 亲亲 -->
+      <KeyFrames src="qinqin_1_src.fks"/>
+      <AnimationSet name="qinqin_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="qinqin_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.36" 
+            duration="1"
+            startOffset="333" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="qinqin_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.36" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="1916" 
+            repeatCount="0" 
+            start="true"/>
+        <!-- 眼睛 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="qinqin_yanjing_UV_1" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.5" 
+            duration="1"
+            startOffset="333" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="qinqin_yanjing_UV_2" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.5" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="1916" 
+            repeatCount="0" 
+            start="true"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="56" name="_kfRotqinqin_1Spine1_M" kfsName="qinqin_1Spine1_M_kfRot" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="56" name="_kfTranqinqin_1Chest_M" kfsName="qinqin_1Chest_M_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="56" name="_kfTranqinqin_1Shoulder_R" kfsName="qinqin_1Shoulder_R_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="56" name="_kfRotqinqin_1Shoulder_R" kfsName="qinqin_1Shoulder_R_kfRot" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="56" name="_kfTranqinqin_1Elbow_R" kfsName="qinqin_1Elbow_R_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="56" name="_kfTranqinqin_1Wrist_R" kfsName="qinqin_1Wrist_R_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="56" name="_kfTranqinqin_1Neck_M" kfsName="qinqin_1Neck_M_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="56" name="_kfRotqinqin_1Neck_M" kfsName="qinqin_1Neck_M_kfRot" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="56" name="_kfTranqinqin_1Head_M" kfsName="qinqin_1Head_M_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="56" name="_kfTranqinqin_1Shoulder_L" kfsName="qinqin_1Shoulder_L_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="56" name="_kfRotqinqin_1Shoulder_L" kfsName="qinqin_1Shoulder_L_kfRot" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="56" name="_kfTranqinqin_1Elbow_L" kfsName="qinqin_1Elbow_L_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="56" name="_kfTranqinqin_1Wrist_L" kfsName="qinqin_1Wrist_L_kfTran" duration="2333.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 跳舞 -->
+      <KeyFrames src="tiaowu_1_src.fks"/>
+      <AnimationSet name="tiaowu_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="tiaowu_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.24" 
+            duration="1"
+            startOffset="416" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="tiaowu_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.24" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="2579" 
+            repeatCount="0" 
+            start="true"/>
+        <!-- 眼睛 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="tiaowu_yanjing_UV_1" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.33" 
+            duration="1"
+            startOffset="416" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="tiaowu_yanjing_UV_2" 
+            material_unit="yanjing_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.33" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="2579" 
+            repeatCount="0" 
+            start="true"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="70" name="_kfTrantiaowu_1Root_M" kfsName="tiaowu_1Root_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="70" name="_kfRottiaowu_1Hip_R" kfsName="tiaowu_1Hip_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="70" name="_kfTrantiaowu_1Knee_R" kfsName="tiaowu_1Knee_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="70" name="_kfRottiaowu_1Knee_R" kfsName="tiaowu_1Knee_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="70" name="_kfTrantiaowu_1Ankle_R" kfsName="tiaowu_1Ankle_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="70" name="_kfRottiaowu_1Ankle_R" kfsName="tiaowu_1Ankle_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="70" name="_kfTrantiaowu_1Toes_R" kfsName="tiaowu_1Toes_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="70" name="_kfRottiaowu_1Toes_R" kfsName="tiaowu_1Toes_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="70" name="_kfTrantiaowu_1Spine1_M" kfsName="tiaowu_1Spine1_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="70" name="_kfTrantiaowu_1Chest_M" kfsName="tiaowu_1Chest_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="70" name="_kfTrantiaowu_1Shoulder_R" kfsName="tiaowu_1Shoulder_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="70" name="_kfRottiaowu_1Shoulder_R" kfsName="tiaowu_1Shoulder_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="70" name="_kfTrantiaowu_1Elbow_R" kfsName="tiaowu_1Elbow_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="70" name="_kfRottiaowu_1Elbow_R" kfsName="tiaowu_1Elbow_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="70" name="_kfTrantiaowu_1Wrist_R" kfsName="tiaowu_1Wrist_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="70" name="_kfRottiaowu_1Wrist_R" kfsName="tiaowu_1Wrist_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="70" name="_kfTrantiaowu_1Neck_M" kfsName="tiaowu_1Neck_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="70" name="_kfRottiaowu_1Neck_M" kfsName="tiaowu_1Neck_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="70" name="_kfTrantiaowu_1Head_M" kfsName="tiaowu_1Head_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="70" name="_kfTrantiaowu_1Shoulder_L" kfsName="tiaowu_1Shoulder_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="70" name="_kfRottiaowu_1Shoulder_L" kfsName="tiaowu_1Shoulder_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="70" name="_kfTrantiaowu_1Elbow_L" kfsName="tiaowu_1Elbow_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="70" name="_kfRottiaowu_1Elbow_L" kfsName="tiaowu_1Elbow_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="70" name="_kfTrantiaowu_1Wrist_L" kfsName="tiaowu_1Wrist_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="70" name="_kfRottiaowu_1Wrist_L" kfsName="tiaowu_1Wrist_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="70" name="_kfRottiaowu_1Hip_L" kfsName="tiaowu_1Hip_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="70" name="_kfTrantiaowu_1Knee_L" kfsName="tiaowu_1Knee_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="70" name="_kfRottiaowu_1Knee_L" kfsName="tiaowu_1Knee_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="70" name="_kfTrantiaowu_1Ankle_L" kfsName="tiaowu_1Ankle_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="70" name="_kfRottiaowu_1Ankle_L" kfsName="tiaowu_1Ankle_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="70" name="_kfTrantiaowu_1Toes_L" kfsName="tiaowu_1Toes_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="70" name="_kfRottiaowu_1Toes_L" kfsName="tiaowu_1Toes_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 说话 -->
+      <KeyFrames src="shuohua_1_src.fks"/>
+      <AnimationSet name="shuohua_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="shuohua_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.47" 
+            duration="1"
+            startOffset="0" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="shuohua_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.47" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="5208" 
+            repeatCount="0" 
+            start="true"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuoyan" numFrames="125" name="_kfScaleshuohua_1congmingqian_zuoyan" kfsName="shuohua_1congmingqian_zuoyan_kfScale" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_youyan" numFrames="125" name="_kfScaleshuohua_1congmingqian_youyan" kfsName="shuohua_1congmingqian_youyan_kfScale" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuiba" numFrames="125" name="_kfScaleshuohua_1congmingqian_zuiba" kfsName="shuohua_1congmingqian_zuiba_kfScale" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="125" name="_kfTranshuohua_1Root_M" kfsName="shuohua_1Root_M_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="125" name="_kfRotshuohua_1Root_M" kfsName="shuohua_1Root_M_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="125" name="_kfRotshuohua_1Hip_R" kfsName="shuohua_1Hip_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="125" name="_kfTranshuohua_1Knee_R" kfsName="shuohua_1Knee_R_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="125" name="_kfRotshuohua_1Knee_R" kfsName="shuohua_1Knee_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="125" name="_kfTranshuohua_1Ankle_R" kfsName="shuohua_1Ankle_R_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="125" name="_kfRotshuohua_1Ankle_R" kfsName="shuohua_1Ankle_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="125" name="_kfTranshuohua_1Toes_R" kfsName="shuohua_1Toes_R_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="125" name="_kfRotshuohua_1Toes_R" kfsName="shuohua_1Toes_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="125" name="_kfTranshuohua_1Spine1_M" kfsName="shuohua_1Spine1_M_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="125" name="_kfRotshuohua_1Spine1_M" kfsName="shuohua_1Spine1_M_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="125" name="_kfTranshuohua_1Chest_M" kfsName="shuohua_1Chest_M_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="125" name="_kfRotshuohua_1Chest_M" kfsName="shuohua_1Chest_M_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_R" numFrames="125" name="_kfRotshuohua_1Scapula_R" kfsName="shuohua_1Scapula_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="125" name="_kfTranshuohua_1Shoulder_R" kfsName="shuohua_1Shoulder_R_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="125" name="_kfRotshuohua_1Shoulder_R" kfsName="shuohua_1Shoulder_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="125" name="_kfTranshuohua_1Elbow_R" kfsName="shuohua_1Elbow_R_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="125" name="_kfRotshuohua_1Elbow_R" kfsName="shuohua_1Elbow_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="125" name="_kfTranshuohua_1Wrist_R" kfsName="shuohua_1Wrist_R_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="125" name="_kfRotshuohua_1Wrist_R" kfsName="shuohua_1Wrist_R_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="125" name="_kfTranshuohua_1Neck_M" kfsName="shuohua_1Neck_M_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="125" name="_kfRotshuohua_1Neck_M" kfsName="shuohua_1Neck_M_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="125" name="_kfTranshuohua_1Head_M" kfsName="shuohua_1Head_M_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="125" name="_kfTranshuohua_1Shoulder_L" kfsName="shuohua_1Shoulder_L_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="125" name="_kfRotshuohua_1Shoulder_L" kfsName="shuohua_1Shoulder_L_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="125" name="_kfTranshuohua_1Elbow_L" kfsName="shuohua_1Elbow_L_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="125" name="_kfRotshuohua_1Elbow_L" kfsName="shuohua_1Elbow_L_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="125" name="_kfTranshuohua_1Wrist_L" kfsName="shuohua_1Wrist_L_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="125" name="_kfRotshuohua_1Hip_L" kfsName="shuohua_1Hip_L_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="125" name="_kfTranshuohua_1Knee_L" kfsName="shuohua_1Knee_L_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="125" name="_kfRotshuohua_1Knee_L" kfsName="shuohua_1Knee_L_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="125" name="_kfTranshuohua_1Ankle_L" kfsName="shuohua_1Ankle_L_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="125" name="_kfRotshuohua_1Ankle_L" kfsName="shuohua_1Ankle_L_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="125" name="_kfTranshuohua_1Toes_L" kfsName="shuohua_1Toes_L_kfTran" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+          <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="125" name="_kfRotshuohua_1Toes_L" kfsName="shuohua_1Toes_L_kfRot" duration="5208.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+
+      <!-- 撒红包 -->
+      <KeyFrames src="shahongbao_1_src.fks"/>
+      <AnimationSet name="shahongbao_1_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <!-- 嘴巴 -->
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="shahongbao_zuiba_UV_1" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="0.0" 
+            mToTranslateV="-0.24" 
+            duration="1"
+            startOffset="999" 
+            repeatCount="0" 
+            start="true"/>
+        <TexCoordModifierAnimation 
+            version="2" 
+            name="shahongbao_zuiba_UV_2" 
+            material_unit="zuiba_s 0" 
+            fillBefore="false" 
+            fillEnabled="true" 
+            interpolator="linear" 
+            mFromTranslateV="-0.24" 
+            mToTranslateV="0.0" 
+            duration="1"
+            startOffset="2200" 
+            repeatCount="0" 
+            start="true"/>
+        <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_zuoyan" numFrames="70" name="_kfScaleshahongbao_1congmingqian_zuoyan" kfsName="shahongbao_1congmingqian_zuoyan_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="congmingqian_youyan" numFrames="70" name="_kfScaleshahongbao_1congmingqian_youyan" kfsName="shahongbao_1congmingqian_youyan_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao" numFrames="70" name="_kfTranshahongbao_1hongbao" kfsName="shahongbao_1hongbao_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao" numFrames="70" name="_kfRotshahongbao_1hongbao" kfsName="shahongbao_1hongbao_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao" numFrames="70" name="_kfScaleshahongbao_1hongbao" kfsName="shahongbao_1hongbao_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao1" numFrames="70" name="_kfTranshahongbao_1hongbao1" kfsName="shahongbao_1hongbao1_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao1" numFrames="70" name="_kfRotshahongbao_1hongbao1" kfsName="shahongbao_1hongbao1_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao1" numFrames="70" name="_kfScaleshahongbao_1hongbao1" kfsName="shahongbao_1hongbao1_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao2" numFrames="70" name="_kfTranshahongbao_1hongbao2" kfsName="shahongbao_1hongbao2_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao2" numFrames="70" name="_kfRotshahongbao_1hongbao2" kfsName="shahongbao_1hongbao2_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_ScaleAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="hongbao2" numFrames="70" name="_kfScaleshahongbao_1hongbao2" kfsName="shahongbao_1hongbao2_kfScale" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="70" name="_kfTranshahongbao_1Root_M" kfsName="shahongbao_1Root_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Root_M" numFrames="70" name="_kfRotshahongbao_1Root_M" kfsName="shahongbao_1Root_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_R" numFrames="70" name="_kfRotshahongbao_1Hip_R" kfsName="shahongbao_1Hip_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="70" name="_kfTranshahongbao_1Knee_R" kfsName="shahongbao_1Knee_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_R" numFrames="70" name="_kfRotshahongbao_1Knee_R" kfsName="shahongbao_1Knee_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="70" name="_kfTranshahongbao_1Ankle_R" kfsName="shahongbao_1Ankle_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_R" numFrames="70" name="_kfRotshahongbao_1Ankle_R" kfsName="shahongbao_1Ankle_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="70" name="_kfTranshahongbao_1Toes_R" kfsName="shahongbao_1Toes_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_R" numFrames="70" name="_kfRotshahongbao_1Toes_R" kfsName="shahongbao_1Toes_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="70" name="_kfTranshahongbao_1Spine1_M" kfsName="shahongbao_1Spine1_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Spine1_M" numFrames="70" name="_kfRotshahongbao_1Spine1_M" kfsName="shahongbao_1Spine1_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Chest_M" numFrames="70" name="_kfTranshahongbao_1Chest_M" kfsName="shahongbao_1Chest_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_R" numFrames="70" name="_kfRotshahongbao_1Scapula_R" kfsName="shahongbao_1Scapula_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="70" name="_kfTranshahongbao_1Shoulder_R" kfsName="shahongbao_1Shoulder_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_R" numFrames="70" name="_kfRotshahongbao_1Shoulder_R" kfsName="shahongbao_1Shoulder_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="70" name="_kfTranshahongbao_1Elbow_R" kfsName="shahongbao_1Elbow_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_R" numFrames="70" name="_kfRotshahongbao_1Elbow_R" kfsName="shahongbao_1Elbow_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="70" name="_kfTranshahongbao_1Wrist_R" kfsName="shahongbao_1Wrist_R_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_R" numFrames="70" name="_kfRotshahongbao_1Wrist_R" kfsName="shahongbao_1Wrist_R_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="70" name="_kfTranshahongbao_1Neck_M" kfsName="shahongbao_1Neck_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Neck_M" numFrames="70" name="_kfRotshahongbao_1Neck_M" kfsName="shahongbao_1Neck_M_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Head_M" numFrames="70" name="_kfTranshahongbao_1Head_M" kfsName="shahongbao_1Head_M_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Scapula_L" numFrames="70" name="_kfRotshahongbao_1Scapula_L" kfsName="shahongbao_1Scapula_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="70" name="_kfTranshahongbao_1Shoulder_L" kfsName="shahongbao_1Shoulder_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Shoulder_L" numFrames="70" name="_kfRotshahongbao_1Shoulder_L" kfsName="shahongbao_1Shoulder_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="70" name="_kfTranshahongbao_1Elbow_L" kfsName="shahongbao_1Elbow_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Elbow_L" numFrames="70" name="_kfRotshahongbao_1Elbow_L" kfsName="shahongbao_1Elbow_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="70" name="_kfTranshahongbao_1Wrist_L" kfsName="shahongbao_1Wrist_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Wrist_L" numFrames="70" name="_kfRotshahongbao_1Wrist_L" kfsName="shahongbao_1Wrist_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Hip_L" numFrames="70" name="_kfRotshahongbao_1Hip_L" kfsName="shahongbao_1Hip_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="70" name="_kfTranshahongbao_1Knee_L" kfsName="shahongbao_1Knee_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Knee_L" numFrames="70" name="_kfRotshahongbao_1Knee_L" kfsName="shahongbao_1Knee_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="70" name="_kfTranshahongbao_1Ankle_L" kfsName="shahongbao_1Ankle_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Ankle_L" numFrames="70" name="_kfRotshahongbao_1Ankle_L" kfsName="shahongbao_1Ankle_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="70" name="_kfTranshahongbao_1Toes_L" kfsName="shahongbao_1Toes_L_kfTran" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="Toes_L" numFrames="70" name="_kfRotshahongbao_1Toes_L" kfsName="shahongbao_1Toes_L_kfRot" duration="2916.67" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+      <!-- 大红包动画 -->
+      <KeyFrames src="hongbaodiao_src.fks"/>
+      <AnimationSet name="hongbaodiao_AniSet" start="false" repeatCount="0" version="2" canstop="true">
+        <KF_TranslateAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="dahongbao" numFrames="41" name="_kfTranhongbaodiaodahongbao" kfsName="hongbaodiaodahongbao_kfTran" duration="1708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+        <KF_RotationAnimation fillEnabled="true" fillBefore="false" version="2" interpolator="kfLinear" target="dahongbao" numFrames="41" name="_kfRothongbaodiaodahongbao" kfsName="hongbaodiaodahongbao_kfRot" duration="1708.33" isCoordinateRelativeToScreen="false" repeatCount="0" canstop="true" startOffset="0"/>
+      </AnimationSet>
+      <ValueAnimation version="2" name="hongbaodiao_alpha_value" interpolator="linear" mFromFloatValue="0.0" mToFloatValue="0.0" duration="1000" startOffset="0" start="false"/>
+    </Scene>
+    <JS src="main.js" />
+  </Asset>
+</Assets>
