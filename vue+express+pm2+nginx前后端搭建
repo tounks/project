@@ -1,9 +1,9 @@
 一、LINUX上安装node环境：
    1、wget命令下载Node.js安装包。
-       该安装包是编译好的文件，解压之后，在bin文件夹中就已存在node和npm，无需重复编译。
-       wget https://nodejs.org/dist/v6.9.5/node-v6.9.5-linux-x64.tar.xz
-   2、 解压文件。
-       tar xvf node-v6.9.5-linux-x64.tar.xz
+      该安装包是编译好的文件，解压之后，在bin文件夹中就已存在node和npm，无需重复编译。
+      wget https://nodejs.org/dist/v6.9.5/node-v6.9.5-linux-x64.tar.xz
+   2、解压文件。
+      tar xvf node-v6.9.5-linux-x64.tar.xz
    3、创建软链接，使node和npm命令全局有效。
       通过创建软链接的方法，使得在任意目录下都可以直接使用node和npm命令：
       ln -s /root/node-v6.9.5-linux-x64/bin/node /usr/local/bin/node
@@ -12,13 +12,13 @@
       node -v
       npm -v
    5、至此，Node.js环境已安装完毕。
-     软件默认安装在/root/node-v6.9.5-linux-x64/目录下。如果需要将该软件安装到其他目录（如：/opt/node/）下，请进行如下操作：
-     mkdir -p /opt/node/
-     mv /root/node-v6.9.5-linux-x64/* /opt/node/
-     rm -f /usr/local/bin/node
-     rm -f /usr/local/bin/npm
-     ln -s /opt/node/bin/node /usr/local/bin/node
-     ln -s /opt/node/bin/npm /usr/local/bin/npm
+      软件默认安装在/root/node-v6.9.5-linux-x64/目录下。如果需要将该软件安装到其他目录（如：/opt/node/）下，请进行如下操作：
+      mkdir -p /opt/node/
+      mv /root/node-v6.9.5-linux-x64/* /opt/node/
+      rm -f /usr/local/bin/node
+      rm -f /usr/local/bin/npm
+      ln -s /opt/node/bin/node /usr/local/bin/node
+      ln -s /opt/node/bin/npm /usr/local/bin/npm
      
      注：参考链接 https://www.cnblogs.com/MY0101/p/6625344.html
      
@@ -51,7 +51,7 @@
          https://blog.csdn.net/z920954494/article/details/52132125
          安装Gcc: https://blog.csdn.net/anneqiqi/article/details/51725658
        
-       nginx配置：(正式前后端代理分开，接口代理：location ~ ^/api，vue项目地址: location / )
+       nginx配置：(正式前后端代理分开，接口代理：location ~ ^/api，vue项目地址配置: location / )
             server {
                  listen       200; #监听200端口，必须加上端口号才能访问地址
                  server_name  fengyenan.com;
@@ -92,4 +92,16 @@
     2、在任意目录下面使用：
        express myExpress 
        npm install依赖包
-    3、  
+    3、以html作为引擎，接下来就对目录做一个调整：
+       将bin目录下www拷出上级目录，改名为main.js等等，参考链接：https://blog.csdn.net/jingbo18/article/details/78576547
+    4、调试时，配置请求不跨越，在app.js里面  var app = express();下配置
+       var app = express();
+       app.use(function(req, res, next){
+          res.header("Access-Control-Allow-Origin", "*");
+          res.header("Access-Control-Allow-Headers", "X-Requested-With");
+          res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+          res.header("X-Powered-By",' 3.2.1');
+          res.header("Content-Type", "application/json;charset=utf-8");
+          next();
+       });
+     5、项目部署在如nginx配置的话，放在任何目录下面，使用pm2启动
