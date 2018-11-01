@@ -21,4 +21,34 @@
      ln -s /opt/node/bin/npm /usr/local/bin/npm
      
      注：参考链接 https://www.cnblogs.com/MY0101/p/6625344.html
-二
+     
+二  安装nginx步骤：
+    1、linux环境主要是为：Centos7 和 ubuntu环境
+       打开编辑器：ssh root@域名 登陆，
+       一般外部文件放到/usr/local/src下，也可以自己下载解压
+       tar -zxvf nginx-1.15.4.tar.gz -C /usr/local/src
+    2、解压后进入： cd /usr/local/src/nginx-1.15.4
+       检查安装环境,并指定将来要安装的路径：
+       ./configure --prefix=/usr/local/nginx
+    3、Centos7下使用yum安装缺少的包，先安装yum，主要是缺少pcre-devel／openssl／openssl-devel需要安装
+      yum -y install gcc pcre-devel openssl openssl-devel
+      执行：
+         make && make install
+      如果执行成功，会在usr/local/src 下面看到nginx目录，说明安装成功
+      到nginx/sbin目录下面 执行 ./nginx 启动nginx 如果弹出欢迎使用的页面，说明成功启动
+      
+      参考链接：https://blog.csdn.net/maoyuanming0806/article/details/80152876
+      
+    4、ubuntu环境下面 没有yum:
+       解决依赖包openssl安装，命令：
+       sudo apt-get install openssl libssl-dev
+       解决依赖包pcre安装，命令：
+       sudo apt-get install libpcre3 libpcre3-dev
+       在Ubuntu下安装GCC和其他一些Linux系统有点不一样：
+       sudo apt-get  install  build-essential
+       
+       参考链接：
+         https://blog.csdn.net/z920954494/article/details/52132125
+         安装Gcc: https://blog.csdn.net/anneqiqi/article/details/51725658
+         
+ 三   安装PM2及其使用        
