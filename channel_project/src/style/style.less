@@ -1,0 +1,165 @@
+html,body {
+  margin: 0;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  font: 12px/1.5 "Microsoft Yahei",arial,tahoma,"Hiragino Sans GB";
+  color: #323232;
+  background: white;
+  overflow: visible !important ;
+}
+input{outline:none}
+
+.is-danger{
+  color: red;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+[v-cloak] {
+  display:none !important;
+}
+
+.el-table__header,.el-table__body{
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+
+[v-cloak] {
+  display:none;
+}
+
+@media only screen and (max-width: 359px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 374px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 399px) {
+  html {
+    font-size: 14.0625px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 479px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 539px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 540px) and (max-width: 639px) {
+  html {
+    font-size: 20.25px;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 719px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 27px;
+  }
+}
+
+.el-pagination{
+  margin-top: 10px !important;
+}
+
+
+.hide-dialog{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.input-form{
+  z-index: 12;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%); 	/* IE 9 */
+  -moz-transform:translate(-50%,-50%); 	/* Firefox */
+  -webkit-transform:translate(-50%,-50%); /* Safari 和 Chrome */
+  -o-transform:translate(-50%,-50%);
+  min-width: 400px;
+  background-color: white;
+  text-align: center;
+  border-radius: 16px;
+  .close-button{
+    height: 1rem;
+    cursor: pointer;
+    i{
+      display: inline-block;
+      color: #999;
+      background: url("../image/close.png");
+      background-size: cover;
+      height: 0.6rem;
+      width: 0.6rem;
+      float: right;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+  .input-name{
+    margin-bottom: 20px;
+    .input-head{
+      display: inline-block;
+      width:84px;
+      text-align: right;
+    }
+    .prizes-name1{
+      width: 223px;
+      display: inline-block;
+    }
+  }
+  .prizes-type{
+    margin-bottom: 2rem;
+  }
+  .sure-button{
+    margin-bottom: 20px;
+    span{
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  .error-tip{
+    color: red;
+    /* margin-top: -18px; */
+    line-height: 32px;
+    /* display: inline-block; */
+    /* width: 100px; */
+    margin-top: -18px;
+    height: 32px;
+    text-align: left;
+    margin-left: 122px;
+  }
+}
